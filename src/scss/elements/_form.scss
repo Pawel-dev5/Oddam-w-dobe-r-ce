@@ -1,0 +1,39 @@
+
+#Form {
+    height: 900px;
+    background-image: url("../../assets/assets/Background-Contact-Form.jpg"), linear-gradient(#eb01a5, #d13531); /* W3C */
+    background-size: cover;
+}
+#Form > div {
+    background: linear-gradient(90deg, rgba(39,198,162,1) 0%, rgba(240,245,244,0.8743872549019608) 0%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#FormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+}
+
+#EmptyDiv {
+    width: 50%;
+}
+#FormDiv {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#FormDiv > h1 {
+    font-size: 38px;
+    letter-spacing: -0.76px;
+    color:$color-first;
+    font-weight: lighter;
+}

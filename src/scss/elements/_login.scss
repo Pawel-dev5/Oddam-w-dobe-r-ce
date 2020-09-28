@@ -1,0 +1,47 @@
+
+#LoginContainer, #CreateAccountContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#LoginContainerHeader, #CreateAccountContainerHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#LoginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#LoginForm, #CreateAccountForm {
+    background-color: $color-second;
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+#LoginButtons, #CreateAccountButtons{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    justify-content: space-between;
+
+}
+#LoginButtons1,  #LoginButtons2, #CreateAccountButtons1, #CreateAccountButtons2 {
+    background-color: $color-second;
+    font-family: $font-primary;
+    font-weight: lighter;
+    font-size: 20px;
+    border: 0;
+    padding: 5px 15px 5px 15px;
+
+}
+#LoginButtons2, #CreateAccountButtons2 {
+    border: 0.5px solid black;
+}

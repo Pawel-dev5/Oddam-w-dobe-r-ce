@@ -1,0 +1,62 @@
+
+#MainStats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../../assets/assets/3\ Columns\ Background.png");
+    text-align: center;
+    /* margin-top: 20px; */
+    /* padding: 30px 0 30px 0; */
+    color: $color-first;
+    font-family: $font-primary;
+    font-weight: lighter;
+    height: 384px;
+
+
+}
+
+#MainStatsDiv {
+    width: 20%;
+}
+
+#MainStatsDiv > h3{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+#MainStatsDiv > p{
+    font-family: $font-secondary;
+    font-weight: lighter;
+    font-size: 16px;
+
+}
+#MainStatsDiv > h1 {
+    font-size: 90px;
+    margin: 0;
+    text-align: center;
+    font-weight: lighter;
+    color:$color-third;
+
+    /* font: normal normal Open Sans; */
+    letter-spacing: 0px;
+    opacity: 1;
+    }
+
+
+#MainBoxStartDiv {
+    width: 50%;
+}
+
+#MainBoxStartDiv > div {
+    text-align: center;
+    font-size: 20px;
+    
+}
+#MainBoxStartDiv > div > #decoration {
+    width: 200px;
+    height: 50px;
+}
+
+#MainBoxStartDiv > div:nth-child(2) {
+    text-align: center;
+}
