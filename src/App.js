@@ -12,6 +12,9 @@ import {
 } from "react-router-dom";
 import Scroll from "react-scroll";
 
+import Icon1 from "./assets/assets/Icon-1.svg";
+
+
 const ScrollLink = Scroll.Link;
 
 // const Contact = () => {
@@ -104,14 +107,14 @@ const FourSteps = () => {
       <div id="ChooseThingsMain">
         <div id="ChooseThings">
           <div id="Icon1">
-            <img id="ChooseIcons" src="../assets/assets/Icon-1.svg" alt="icon1"></img>
+            <img id="ChooseIcons" src={Icon1} alt="icon1"></img>
             <p>Wybierz rzeczy</p>
             <img id="ChooseLine" alt="decoration" />
             <p>ubrania, zabawki,</p>
             <p>sprzęt i inne</p>
           </div>
           <div id="Icon2">
-            <img id="ChooseIcons" src="../assets/assets/Icon-2.svg" alt="icon2"></img>
+            <img id="ChooseIcons" src="assets/assets/Icon-2.svg" alt="icon2"></img>
             <p>Spakuj je</p>
             <img id="ChooseLine" alt="decoration" />
             <p>skorzystaj z</p>
@@ -516,8 +519,8 @@ function Nav() {
             </ul> */}
             <ul>
               <li>
-                <Link to="/" className="menu-link"
-                  activeClassName="menu-link-active">Start</Link>
+                <NavLink exact to="/" className="menu-link"
+                  activeClassName="menu-link-active">Start</NavLink>
                 <ScrollLink path="/"
                   className="navy"
                   smooth={true}
