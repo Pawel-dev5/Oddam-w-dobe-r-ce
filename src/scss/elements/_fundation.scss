@@ -35,6 +35,11 @@
     align-items: center;
     justify-content: center;
 }
+#Fundations > div:nth-child(1) > h1 {
+    color: $color-first;
+    font: normal normal normal 38px/55px $font-primary;
+    margin-bottom: 10px;
+}
 #Fundations > div > button > p{
     margin: 0;
     padding: 0;
@@ -62,8 +67,8 @@
 }
 .buttons {
     border: none;
-    background-color: $color-second;
-    font-family: Open Sans, sans-serif;
+    background-color: white;
+    font-family: $font-primary;
     font-weight: lighter;
     font-size: 20px;
     padding: 5px 15px 5px 15px;
@@ -80,8 +85,8 @@
     height: 50px;
     width: 40px;
     border: none;
-    background-color: $color-second;
-    font-family: Open Sans, sans-serif;
+    background-color: white;
+    font-family: $font-primary;
     font-weight: lighter;
     font-size: 20px;
 }
@@ -115,6 +120,8 @@
     letter-spacing: 0px;
     color: $color-first;
     opacity: 1;
+    padding: 20px 0 20px 0;
+
 }
 #FundationsUlBox > ul >li > p{
     font: normal normal 300 18px/22px $font-secondary;
@@ -128,4 +135,5 @@
     letter-spacing: 0px;
     color: $color-first;
     opacity: 1;
+    padding-bottom: 20px;
 }

@@ -31,34 +31,14 @@
     height: 83px;
     background: transparent 0% 0% no-repeat;
     opacity: 1;
+    margin-bottom: 10px;
 }
-#Icon4 > p:nth-last-child(1) {
+
+#Icon1 > p:nth-last-child(4),#Icon2 > p:nth-last-child(4), #Icon3 > p:nth-last-child(4), #Icon4 > p:nth-last-child(4) {
     margin-top: 0;
+    margin-bottom: 10px;
 } 
-#Icon4 > p:nth-last-child(2) {
+#Icon1 > p:nth-last-child(2), #Icon2 > p:nth-last-child(2), #Icon3 > p:nth-last-child(2), #Icon4 > p:nth-last-child(2) {
     margin-bottom: 0;
-} 
-#Icon3 > p:nth-last-child(1) {
-    margin-top: 0;
-} 
-#Icon3 > p:nth-last-child(4) {
-    margin-top: 0;
-} 
-#Icon3 > p:nth-last-child(5) {
-    margin-bottom: 0;
-} 
-#Icon3 > p:nth-last-child(2) {
-    margin-bottom: 0;
-} 
-#Icon2 > p:nth-last-child(1) {
-    margin-top: 0;
-} 
-#Icon2 > p:nth-last-child(2) {
-    margin-bottom: 0;
-} 
-#Icon1 > p:nth-last-child(1) {
-    margin-top: 0;
-} 
-#Icon1 > p:nth-last-child(2) {
-    margin-bottom: 0;
+    margin-top: 10px;
 } 

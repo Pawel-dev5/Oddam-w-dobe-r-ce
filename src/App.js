@@ -12,7 +12,18 @@ import {
 } from "react-router-dom";
 import Scroll from "react-scroll";
 
+// Assets
 import Icon1 from "./assets/assets/Icon-1.svg";
+import Icon2 from "./assets/assets/Icon-2.svg";
+import Icon3 from "./assets/assets/Icon-3.svg";
+import Icon4 from "./assets/assets/Icon-4.svg";
+import Decoration from "./assets/assets/Decoration.svg";
+import HomeImage from "./assets/assets/Home-Hero-Image.jpg";
+import People from "./assets/assets/People.jpg"
+import Signature from "./assets/assets/Signature.svg"
+import FacebookImage from "./assets/assets/Facebook.svg"
+import InstagramImage from "./assets/assets/Instagram.svg"
+
 
 
 const ScrollLink = Scroll.Link;
@@ -27,7 +38,7 @@ const ScrollLink = Scroll.Link;
 const MainBoxStart = () => (
   <section id="MainBoxStart">
     <div id="MainBoxStartDiv">
-      <img alt="decoration"></img>
+      <img alt="decoration" src={HomeImage}></img>
     </div>
     <div id="MainBoxStartDiv">
 
@@ -36,7 +47,7 @@ const MainBoxStart = () => (
         <h1>Oddaj niechciane rzeczy w naufane ręce</h1>
       </div>
       <div>
-        <img id="decoration" alt="decoration"></img>
+        <img id="decoration" src={Decoration} alt="decoration"></img>
 
       </div>
       <MainBoxStartButtons />
@@ -102,36 +113,36 @@ const FourSteps = () => {
     <section id="FourSteps">
       <div>
         <h1>Wystarczą 4 proste kroki</h1>
-        <img id="decoration" alt="decoration"></img>
+        <img id="decoration"  src={Decoration} alt="decoration"></img>
       </div>
       <div id="ChooseThingsMain">
         <div id="ChooseThings">
           <div id="Icon1">
             <img id="ChooseIcons" src={Icon1} alt="icon1"></img>
             <p>Wybierz rzeczy</p>
-            <img id="ChooseLine" alt="decoration" />
+            <div id="ChooseLine" alt="line" />
             <p>ubrania, zabawki,</p>
             <p>sprzęt i inne</p>
           </div>
           <div id="Icon2">
-            <img id="ChooseIcons" src="assets/assets/Icon-2.svg" alt="icon2"></img>
+            <img id="ChooseIcons" src={Icon2} alt="icon2"></img>
             <p>Spakuj je</p>
-            <img id="ChooseLine" alt="decoration" />
+            <div id="ChooseLine" />
             <p>skorzystaj z</p>
             <p>worków na śmieci</p>
           </div>
           <div id="Icon3">
-            <img id="ChooseIcons" src="../assets/assets/Icon-3.svg" alt="icon3"></img>
+            <img id="ChooseIcons" src={Icon3} alt="icon3"></img>
             <p>Zdecyduj komu</p>
             <p>chcesz pomóc</p>
-            <img id="ChooseLine" alt="decoration" />
+            <div id="ChooseLine" alt="line" />
             <p>wybierz zaufane</p>
             <p>miejsce</p>
           </div>
           <div id="Icon4">
-            <img id="ChooseIcons" src="../assets/assets/Icon-4.svg" alt="icon4"></img>
+            <img id="ChooseIcons" src={Icon4} alt="icon4"></img>
             <p>Zamów kuriera</p>
-            <img id="ChooseLine" alt="decoration" />
+            <div id="ChooseLine" alt="line" />
             <p>kurier przyjedzie</p>
             <p>w dogodnym terminie</p>
           </div>
@@ -154,18 +165,18 @@ const MainAboutUs = () => {
     <section id="MainAboutUs">
       <div>
         <h1>O nas</h1>
-        <img id="decoration" src="assets/assets/Decoration.svg"  alt="decoration"></img>
+        <img id="decoration"  src={Decoration}  alt="decoration"></img>
         <p>Nori grape silver beet broccoli kombu beet</p>
         <p>greens fava bean potato quandong celery.</p>
         <p>Bunya nuts black-eyed pea prairie tunip leek</p>
         <p>lentil turnip greens pasnip.</p>
         <div>
-          <img id="Signature" src="assets/assets/Signature.svg" alt="signature"></img>
+          <img id="Signature" src={Signature} alt="signature"></img>
 
         </div>
       </div>
       <div>
-        <img id="MainAboutUsFoto" src="assets/assets/People.jpg"  alt="people"></img>
+        <img id="MainAboutUsFoto" src={People}  alt="people"></img>
       </div>
     </section>
   )
@@ -176,7 +187,7 @@ const Fundations = () => {
     <section id="Fundations">
       <div>
         <h1>Komu pomagamy?</h1>
-        <img id="decoration" src="assets/assets/Decoration.svg"  alt="decoration"></img>
+        <img id="decoration" src={Decoration} alt="decoration"></img>
       </div>
       <div id="FundationsButtons">
         <button className="buttons"><p>Fundacjom</p></button>
@@ -234,28 +245,42 @@ const Form = () => {
           <div id="EmptyDiv"></div>
           <div id="FormDiv">
             <h1>Skontaktuj się znami</h1>
-            <img id="decoration" src="assets/assets/Decoration.svg"  alt="decoration"></img>
-          </div>
+            <img id="decoration"  src={Decoration}  alt="decoration"></img>
           <div>
             <form>
-              <label>
-                <input type="text" name="name" />
-              </label>
-              <input type="submit" value="Wyślij" />
+              <div>
+                <label>
+                  <p>Wpisz swoje imię </p>
+                  <input type="text" name="name" placeholder="Krzysztof" />
+                </label>
+                <label>
+                  <p>Wpisz swój email</p>
+                  <input type="email" name="email" placeholder="abc@xyz.pl" />
+                </label>  
+              </div>
+              <div>
+                <label>
+                    <p>Wpisz swoją wiadomość</p>
+                    <textarea id="text" name="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </label>
+              </div>
+              <input id="SubmitButton" type="submit" value="Wyślij" />
             </form>
+          </div>
           </div>
         </div>
         <footer>
-          <p>Copywright by Paweł</p>
+          <p>Copywright by Paweł Nowecki</p>
           <div>
-            <img className="Facebook" alt="facebook"></img>
-            <img className="Instagram" alt="instagram"></img>
+            <img className="Facebook" src={FacebookImage} alt="facebook"></img>
+            <img className="Instagram" src={InstagramImage} alt="instagram"></img>
           </div>
         </footer>
       </div>
     </section>
   )
 }
+
 const Main = () => (
   <>
     <MainBoxStart />
@@ -295,17 +320,18 @@ const Login = () => (
   <div id="LoginContainer">
     <div id="LoginContainerHeader">
       <h1>Zaloguj się</h1>
-      <img id="decoration" src="assets/assets/Decoration.svg" alt="decoration"></img>
+      <img id="decoration" src={Decoration} alt="decoration"></img>
     </div>
     <div id="LoginForm">
       <form>
-        <label>Email
+        <label>
+          <p>Email</p>
            <input type="email" name="email" />
         </label>
-        <label>Hasło
+        <label>
+          <p>Hasło</p>
            <input type="password" name="haslo" />
         </label>
-           <input type="submit" value="Wyślij" />
       </form>
     </div>
     <div id="LoginButtons">
@@ -327,28 +353,36 @@ const OddajRzeczyHeader = () => {
       <div id="OddajRzeczyHeader">
         <h1>Oddaj rzeczy, których już nie chcesz</h1>
         <h1>POTRZEBUJĄCYM</h1>
-        <img id="decoration" src="assets/assets/Decoration.svg" alt="decoration"></img>
+        <img id="decoration"  src={Decoration} alt="decoration"></img>
         <h2>Wystarczą 4 proste kroki:</h2>
         <div id="FourStepsMoveBox">
           <div id="FourStepsMove">
-            <h1>1</h1>
-            <p>Wybierz</p>
-            <p>rzeczy</p>
+            <div>
+              <h1>1</h1>
+              <p>Wybierz</p>
+              <p>rzeczy</p>
+            </div>
           </div>
           <div id="FourStepsMove">
-            <h1>2</h1>
-            <p>Spakuj je</p>
-            <p>w worki</p>
+            <div>
+              <h1>2</h1>
+              <p>Spakuj je</p>
+              <p>w worki</p>
+            </div>
           </div>
           <div id="FourStepsMove">
-            <h1>3</h1>
-            <p>Wybierz</p>
-            <p>fundacje</p>
+            <div>
+              <h1>3</h1>
+              <p>Wybierz</p>
+              <p>fundacje</p>
+            </div>
           </div>
           <div id="FourStepsMove">
-            <h1>4</h1>
-            <p>Zamów</p>
-            <p>kuriera</p>
+            <div>  
+              <h1>4</h1>
+              <p>Zamów</p>
+              <p>kuriera</p>
+            </div>
           </div>
         </div>
       </div>
@@ -415,10 +449,23 @@ const CreateAccount = () => (
   <div id="CreateAccountContainer">
     <div id="CreateAccountContainerHeader">
       <h1>Załóż konto</h1>
-      <img id="decoration" src="assets/assets/Decoration.svg" alt="decoration"></img>
+      <img id="decoration"  src={Decoration} alt="decoration"></img>
     </div>
     <div id="CreateAccountForm">
-      <h1>Email</h1>
+      <form>
+        <label>
+          <p>Email</p>
+           <input type="email" name="email" />
+        </label>
+        <label>
+          <p>Hasło</p>
+           <input type="password" name="haslo" />
+        </label>
+        <label>
+          <p>Powtórz hasło</p>
+           <input type="password" name="haslo" />
+        </label>
+      </form>
     </div>
     <div id="CreateAccountButtons">
       {/* <CreateAccount/> */}
