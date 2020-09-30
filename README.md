@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## `Project discription`
 **Oddam w dobre ręce**.
 Celem projektu jest stworzenie miejsca, w którym każdy będzie mógł oddać niepotrzebne rzeczy zaufanym instytucjom.
@@ -43,6 +41,7 @@ Projekt oparty o Sass, doinstalowana paczka `node-sass` aby móc korzystać z te
 
 ######
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 In the project directory, you can run:
