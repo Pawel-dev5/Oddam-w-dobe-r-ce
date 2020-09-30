@@ -1,7 +1,50 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## `Project discription`
+**Oddam w dobre ręce**.
+Celem projektu jest stworzenie miejsca, w którym każdy będzie mógł oddać niepotrzebne rzeczy zaufanym instytucjom.
 
+Projekt będzie **stroną internetową** z prostym formularzem, który ułatwi użytkownikom oddanie rzeczy.
+
+## Skąd pomysł na projekt
+-  Użytkownik ma w domu rzeczy, których chce się pozbyć, ale nie wie jak.
+- Jest wiele dostępnych rozwiązań, ale wiele z nich wymaga dodatkowego wysiłku lub nie ma do nich zaufania. W zweryfikowane miejsca trzeba pojechać, a nie ma na to czasu/ nie ma jak tam pojechać, a kontenery pod domem lub lokalne zbiórki są niezweryfikowane i nie wiadomo czy te rzeczy faktycznie trafią do potrzebujących.
+
+## Funkcje
+1. Widok *Home* - strony głównej wraz z:
+  - sekcją "Komu pomagamy" z możliwością przechodzenia pomiędzy grupami i paginacją
+  - formularzem kontaktowym z walidacją i wysyłką
+2. Widok *Logowania*, *Rejestracji*, *Wylogowania* wraz z Routingiem
+3. Ścieżka `/oddaj-rzeczy` wraz z pełni działającym formularzem, podzielonym na odpowiednie kroki według projektu.
+4. Zapis akcji formularza do Firebase lub `json-server`.
+5. Logowanie i rejestracja użytkownika + wylogowanie (można do tego wykorzystać [Firebase](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/) lub [Okta](https://developer.okta.com/code/react/)).
+6. Możliwość przejścia do *Formularza "Oddaj rzeczy"* tylko po zalogowaniu lub zarejestrowaniu.
+
+## Narzędzia pracy
+### React 
+
+- React (https://reactjs.org/)
+- create-react-app (https://github.com/facebook/create-react-app ) 
+
+### React Router
+Do szybkiego i prostego tworzenia routingu naszej aplikacji, wykorzystałem bibliotekę `react-router-dom`.
+
+- https://www.npmjs.com/package/react-router-dom
+
+
+### React Scroll
+Przewijanie Landing Page do odpowiednich sekcji, ułatwi nam biblioteka `react-scroll`.
+
+- https://www.npmjs.com/package/react-scroll
+
+### Sass
+Projekt oparty o Sass, doinstalowana paczka `node-sass` aby móc korzystać z tego preprocesora.
+
+
+######
+
+
+## Available Scripts
 In the project directory, you can run:
 
 ### `yarn start`
