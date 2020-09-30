@@ -64,6 +64,9 @@ form > div > label, form > label {
         border-bottom: 0.75px solid $color-first;
         margin-top: 10px;
         width: 200px;
+        // opacity: 0.4;
+        color: black;
+
     }
     p{
         text-align: left;
@@ -73,6 +76,9 @@ form > div > label, form > label {
         width: 100%;
         height: 97px;
     }
+}
+::placeholder{
+    opacity: 0.3;
 }
 #SubmitButton {
     width: 150px;

@@ -98,16 +98,21 @@
     margin-top: 20px;
 }
 
-#FundationsUlBox {
+#FundationsUlBox, #OrganizationsUlBox, #LocalCollectionsUlBox {
     width: 1340px;
 }
-#FundationsUlBox > ul {
+
+// #OrganizationsUlBox, #LocalCollectionsUlBox {
+//     display: none;
+// }
+
+#FundationsUlBox > ul, #OrganizationsUlBox > ul, #LocalCollectionsUlBox > ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#FundationsUlBox > ul >li  {
+#FundationsUlBox > ul >li, #OrganizationsUlBox > ul > li, #LocalCollectionsUlBox > ul > li  {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,7 +120,7 @@
     border-bottom: 0.75px solid $color-first;
     color: $color-first;
 }
-#FundationsUlBox > ul >li > div> h1{
+#FundationsUlBox > ul >li > div> h1, #OrganizationsUlBox > ul > li > div > h1, #LocalCollectionsUlBox > ul > li > div > h1{
     font: normal normal 300 26px/31px $font-secondary;
     letter-spacing: 0px;
     color: $color-first;
@@ -123,14 +128,14 @@
     padding: 20px 0 20px 0;
 
 }
-#FundationsUlBox > ul >li > p{
+#FundationsUlBox > ul >li > p, #OrganizationsUlBox > ul > li > p, #LocalCollectionsUlBox > ul > li > p{
     font: normal normal 300 18px/22px $font-secondary;
     letter-spacing: 0px;
     color: $color-first;
     opacity: 1;
 }
 
-#FundationsUlBox > ul >li >div> p{
+#FundationsUlBox > ul >li >div> p, #OrganizationsUlBox > ul > li > div > p, #LocalCollectionsUlBox > ul > li > div > p{
     font: italic normal 300 18px/22px $font-secondary;
     letter-spacing: 0px;
     color: $color-first;

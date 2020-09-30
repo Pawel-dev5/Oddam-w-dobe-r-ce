@@ -1,23 +1,27 @@
 import React from "react";
-
 import {
     BrowserRouter,
     Route,
     Switch,
     NavLink
   } from "react-router-dom";
-  import Scroll from "react-scroll";
+import Scroll from "react-scroll";
+
+// Components
 import Main from "./main";
 import Login from "./Login";
 import OddajRzeczy from "./OddajRzeczyMain";
 import CreateAccount from "./CreateAccount";
 import NotFound from "./NotFound";
 
+// Constants
+const ScrollLink = Scroll.Link;
 
-  const ScrollLink = Scroll.Link;
 
-  
+// Funkctions
 
+
+// Navigation function
 function Nav() {
     const menuItems1 = [
       {
@@ -107,11 +111,8 @@ function Nav() {
           </header>
           <Switch>
             <Route exact path="/" component={Main} />
-            {/* <Route path={LINKS_CONFIG.contact} component={Contact} /> */}
             {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
             {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
-            {/* <Route path="/Ocochodzi" component={CarsList} /> */}
-            {/* <Route path="/fundacje" component={Fundacje} /> */}
             <Route path="/logowanie" component={Login} />
             <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
             <Route path="/rejestracja" component={CreateAccount} />
