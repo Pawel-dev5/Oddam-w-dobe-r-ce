@@ -14,27 +14,43 @@
     text-align: center;
 }
 
-#LoginForm {
+#LoginContainerHeader > h1, #CreateAccountContainerHeader > h1{
+    text-align: center;
+    font: normal normal normal 40px/55px $font-primary;
+    letter-spacing: -0.8px;
+    color: #3C3C3C;
+    opacity: 1;
+}
+
+#LoginForm, #CreateAccountForm {
+    background-color: $color-second;
+    width: 384.5px;
+    height: 235px;
+    margin: 20px 0 20px 0 ;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#LoginForm, #CreateAccountForm {
+#CreateAccountForm {
     background-color: $color-second;
-    width: 400px;
-    height: 300px;
-    margin-bottom: 20px;
+    width: 384.5px;
+    height: 328px;
+    margin: 20px 0 20px 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 #LoginButtons, #CreateAccountButtons{
     display: flex;
     align-items: center;
-    width: 400px;
+    width: 550px;
     justify-content: space-between;
 
 }
 #LoginButtons1,  #LoginButtons2, #CreateAccountButtons1, #CreateAccountButtons2 {
-    background-color: $color-second;
+    background-color: white;
     font-family: $font-primary;
     font-weight: lighter;
     font-size: 20px;
@@ -44,4 +60,18 @@
 }
 #LoginButtons2, #CreateAccountButtons2 {
     border: 0.5px solid black;
+}
+
+#LoginForm > form, #CreateAccountForm > form {
+    width: 60%;
+    input {
+        background-color: $color-second;
+        width: 100%;
+    }
+    label:nth-child(2) {
+        margin-top: 40px;
+    }
+    label:nth-child(3) {
+        margin-top: 40px;
+    }
 }

@@ -1,6 +1,6 @@
 body {
     /* background-color: black; */
-    font-family: Open Sans, sans-serif;
+    font-family: $font-primary;
 
 }
 
@@ -26,7 +26,7 @@ ul{
     /* background-color: grey; */
 }
 .App {
-    font-family: sans-serif;
+    font-family: $font-primary;
     text-align: center;
   }
   
