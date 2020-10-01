@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import {Link} from "react-router-dom";
-=======
-import { Link, } from "react-router-dom";
->>>>>>> 534fe136a15835bbbecec7f64b60ee2948f0760a
 import Decoration from "../assets/assets/Decoration.svg";
 
 const CreateAccount = () => {
@@ -41,8 +37,4 @@ const CreateAccount = () => {
   )
 };
 
-<<<<<<< HEAD
   export {CreateAccount};
-=======
-export default CreateAccount;
->>>>>>> 534fe136a15835bbbecec7f64b60ee2948f0760a

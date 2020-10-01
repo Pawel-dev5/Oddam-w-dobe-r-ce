@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import {Footer} from "./Footer"
-=======
-import React, { useState } from "react";
-import Footer from "./Footer"
->>>>>>> 534fe136a15835bbbecec7f64b60ee2948f0760a
 import Decoration from "../assets/assets/Decoration.svg";
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact";
@@ -145,12 +140,5 @@ const Form = () => {
             </div>
         </section>
     )
-<<<<<<< HEAD
-  }
-  
+    }
 export {Form};
-=======
-}
-
-export default Form;
->>>>>>> 534fe136a15835bbbecec7f64b60ee2948f0760a

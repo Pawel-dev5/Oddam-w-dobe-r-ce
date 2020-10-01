@@ -34,10 +34,4 @@ const MainStats = () => {
     </section>
   )
 }
-
-<<<<<<< HEAD
   export {MainStats};
-  
-=======
-export default MainStats;
->>>>>>> 534fe136a15835bbbecec7f64b60ee2948f0760a
