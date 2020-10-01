@@ -15,7 +15,7 @@ Projekt będzie **stroną internetową** z prostym formularzem, który ułatwi u
 2. Widok *Logowania*, *Rejestracji*, *Wylogowania* wraz z Routingiem
 3. Ścieżka `/oddaj-rzeczy` wraz z pełni działającym formularzem, podzielonym na odpowiednie kroki według projektu.
 4. Zapis akcji formularza do Firebase lub `json-server`.
-5. Logowanie i rejestracja użytkownika + wylogowanie (można do tego wykorzystać [Firebase](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/) lub [Okta](https://developer.okta.com/code/react/)).
+5. Logowanie i rejestracja użytkownika + wylogowanie [Firebase](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/).
 6. Możliwość przejścia do *Formularza "Oddaj rzeczy"* tylko po zalogowaniu lub zarejestrowaniu.
 
 ## Narzędzia pracy
@@ -37,6 +37,17 @@ Przewijanie Landing Page do odpowiednich sekcji, ułatwi nam biblioteka `react-s
 
 ### Sass
 Projekt oparty o Sass, doinstalowana paczka `node-sass` aby móc korzystać z tego preprocesora.
+
+## FONTY
+- `Open Sans ` - https://fonts.google.com/specimen/Open+Sans
+- `Merriweather` - https://fonts.google.com/specimen/Merriweather
+
+## Kolory
+- `#F0F1F1`
+- `#5E5322`
+- `#FAD648`
+- `#737373`
+- `#3C3C3C`
 
 
 ######

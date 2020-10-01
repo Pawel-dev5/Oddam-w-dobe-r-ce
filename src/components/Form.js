@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer"
+import {Footer} from "./Footer"
 import Decoration from "../assets/assets/Decoration.svg";
 
 const Form = () => {
@@ -42,4 +42,4 @@ const Form = () => {
     )
   }
   
-export default Form;
+export {Form};

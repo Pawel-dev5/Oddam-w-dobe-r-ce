@@ -1,5 +1,4 @@
 import React from "react";
-import Decoration from "../assets/assets/Decoration.svg";
 
 const LocalCollections = () => {
     return (
@@ -33,4 +32,4 @@ const LocalCollections = () => {
     )
   }
 
-  export default LocalCollections;
+  export {LocalCollections};

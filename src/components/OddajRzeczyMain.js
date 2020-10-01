@@ -1,9 +1,8 @@
 import React from "react"
 
-import OddajRzeczyHeader from "./OddajRzeczyHeader";
-import OddajRzeczyForm from "./OddajRzeczyForm";
-
-import Form from "./Form"
+import {OddajRzeczyHeader} from "./OddajRzeczyHeader";
+import {OddajRzeczyForm} from "./OddajRzeczyForm";
+import {Form} from "./Form"
 
 const OddajRzeczy = () => {
     return (
@@ -15,4 +14,4 @@ const OddajRzeczy = () => {
     )
   }
 
-  export default OddajRzeczy;
+  export {OddajRzeczy};

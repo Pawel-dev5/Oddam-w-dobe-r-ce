@@ -1,8 +1,8 @@
 import React from "react";
 import Decoration from "../assets/assets/Decoration.svg";
-import Fundations from "./Fundations"
-import Organizations from "./Organizations"
-import LocalCollections from "./LocalCollections";
+import {Fundations} from "./Fundations"
+import {Organizations} from "./Organizations"
+import {LocalCollections} from "./LocalCollections";
 
 const Helpers = () => {
     return (
@@ -32,4 +32,4 @@ const Helpers = () => {
     )
   }
 
-  export default Helpers;
+  export {Helpers};

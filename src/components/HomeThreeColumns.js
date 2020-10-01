@@ -35,5 +35,5 @@ const MainStats = () => {
     )
   }
 
-  export default MainStats;
+  export {MainStats};
   

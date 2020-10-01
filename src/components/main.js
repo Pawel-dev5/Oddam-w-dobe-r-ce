@@ -1,5 +1,5 @@
 import React from "react"
-import Home from "./Home"
+import {Home} from "./Home"
 
 const Main = () => (
     <>
@@ -7,4 +7,4 @@ const Main = () => (
     </>
   );
 
-  export default Main;
+  export {Main};

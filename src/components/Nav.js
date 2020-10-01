@@ -8,11 +8,11 @@ import {
 import Scroll from "react-scroll";
 
 // Components
-import Main from "./main";
-import Login from "./Login";
-import OddajRzeczy from "./OddajRzeczyMain";
-import CreateAccount from "./CreateAccount";
-import NotFound from "./NotFound";
+import {Main} from "./main";
+import {Login} from "./Login";
+import {OddajRzeczy} from "./OddajRzeczyMain";
+import {CreateAccount} from "./CreateAccount";
+import {NotFound} from "./NotFound";
 
 // Constants
 const ScrollLink = Scroll.Link;

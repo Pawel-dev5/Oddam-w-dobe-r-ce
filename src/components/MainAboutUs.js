@@ -25,4 +25,4 @@ const MainAboutUs = () => {
       </section>
     )
   }
-  export default MainAboutUs;
+  export {MainAboutUs};

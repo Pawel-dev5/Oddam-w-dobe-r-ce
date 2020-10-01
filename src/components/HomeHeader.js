@@ -42,4 +42,4 @@ const MainBoxStart = () => (
     )
   }
 
-  export default MainBoxStart;
+  export {MainBoxStart};

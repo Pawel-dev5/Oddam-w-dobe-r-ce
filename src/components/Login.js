@@ -1,5 +1,5 @@
 import React from "react";
-import {Link,} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
 
 const Login = () => (
@@ -33,4 +33,4 @@ const Login = () => (
   );
   
 
-  export default Login;
+  export {Login};

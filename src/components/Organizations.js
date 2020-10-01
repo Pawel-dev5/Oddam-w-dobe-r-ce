@@ -36,4 +36,4 @@ const Organizations = () => {
   )
 }
 
-export default Organizations;
+export {Organizations};

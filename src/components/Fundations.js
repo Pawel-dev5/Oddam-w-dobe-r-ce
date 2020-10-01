@@ -37,4 +37,4 @@ const Fundations = () => {
   )
 }
 
-export default Fundations;
+export {Fundations};
