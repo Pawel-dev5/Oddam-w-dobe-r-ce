@@ -7,12 +7,12 @@ import Form from "./Form"
 
 const OddajRzeczy = () => {
     return (
-      <>
-        <OddajRzeczyHeader />
-        <OddajRzeczyForm />
-        <Form />
-      </>
+        <>
+            <OddajRzeczyHeader />
+            <OddajRzeczyForm />
+            <Form />
+        </>
     )
-  }
+}
 
-  export default OddajRzeczy;
+export default OddajRzeczy;

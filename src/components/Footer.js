@@ -7,8 +7,8 @@ const Footer = () => {
         <>
             <p>Copywright by Paweł Nowecki</p>
             <div>
-              <img className="Facebook" src={FacebookImage} alt="facebook"></img>
-              <img className="Instagram" src={InstagramImage} alt="instagram"></img>
+                <img className="Facebook" src={FacebookImage} alt="facebook"></img>
+                <img className="Instagram" src={InstagramImage} alt="instagram"></img>
             </div>
         </>
     )
