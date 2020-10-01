@@ -5,19 +5,19 @@ import FourSteps from "./FourSteps"
 import MainAboutUs from "./MainAboutUs"
 import Helpers from "./Helpers"
 import Form from "./Form"
-import Nav from "./Nav"
+// import Nav from "./Nav"
 
 
 const Home = () => {
   return (
     <>
-    <MainBoxStart />
-    <MainStats />
-    <FourSteps />
-    <MainAboutUs />
-    <Helpers />
-    <Form />
-    {/* <Nav /> */}
+      <MainBoxStart />
+      <MainStats />
+      <FourSteps />
+      <MainAboutUs />
+      <Helpers />
+      <Form />
+      {/* <Nav /> */}
     </>
   )
 }
