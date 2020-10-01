@@ -9,7 +9,6 @@ import Scroll from "react-scroll";
 
 // Components
 import {Main} from "./main";
-import {Login} from "./Login";
 import {OddajRzeczy} from "./OddajRzeczyMain";
 import {CreateAccount} from "./CreateAccount";
 import {NotFound} from "./NotFound";
@@ -18,24 +17,21 @@ import {NotFound} from "./NotFound";
 const ScrollLink = Scroll.Link;
 
 
-// Functions
+// Funkctions
 
 
 // Navigation function
-function Nav() {
+function NavLogin() {
     const menuItems1 = [
         {
-            link: "/logowanie",
-            name: "Zaloguj"
+            link: "/wylogowano",
+            name: "Wyloguj"
         },
-        // {
-        //     link: "/oddaj-rzeczy",
-        //     name: "Oddaj rzeczy"
-        // },
         {
-            link: "/rejestracja",
-            name: "Załóż konto"
-        }
+            link: "/oddaj-rzeczy",
+            name: "Oddaj rzeczy"
+        },
+   
     ]
 
     return (
@@ -59,20 +55,6 @@ function Nav() {
                         </ul>
                     </nav>
                     <nav>
-                        {/* <ul>
-                {menuItems.map(item => (
-                  <li key={item.link}>
-                    <NavLink
-                      exact={item.link === "/"}
-                      to={item.link}
-                      className="menu-link"
-                      activeClassName="menu-link-active"
-                    >
-                      {item.name}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul> */}
                         <ul>
                             <li>
                                 <NavLink exact to="/" className="menu-link"
@@ -113,7 +95,6 @@ function Nav() {
                     <Route exact path="/" component={Main} />
                     {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
                     {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
-                    <Route path="/logowanie" component={Login} />
                     <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
                     <Route path="/rejestracja" component={CreateAccount} />
                     <Route component={NotFound} />
@@ -125,4 +106,4 @@ function Nav() {
 
 }
 
-export {Nav};
+export {NavLogin};
