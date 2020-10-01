@@ -34,5 +34,4 @@ const MainStats = () => {
     </section>
   )
 }
-
-export default MainStats;
+  export {MainStats};

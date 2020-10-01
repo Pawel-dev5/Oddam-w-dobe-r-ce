@@ -46,4 +46,4 @@ const OddajRzeczyHeader = () => {
   )
 }
 
-export default OddajRzeczyHeader;
+  export {OddajRzeczyHeader};

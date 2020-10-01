@@ -59,4 +59,4 @@ const FourSteps = () => {
     )
 }
 
-export default FourSteps;
+  export {FourSteps};

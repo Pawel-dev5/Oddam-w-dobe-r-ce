@@ -24,5 +24,6 @@ const MainAboutUs = () => {
             </div>
         </section>
     )
-}
-export default MainAboutUs;
+  }
+  
+  export {MainAboutUs};
