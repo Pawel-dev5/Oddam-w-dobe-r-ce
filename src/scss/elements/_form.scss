@@ -61,7 +61,7 @@ form > div > label, form > label {
     input, textarea {
         background-color: #F2F6F5;
         border: 0;
-        border-bottom: 0.75px solid $color-first;
+        border-bottom: 1px solid $color-first;
         margin-top: 10px;
         width: 200px;
         color: black;
@@ -82,7 +82,7 @@ form > div > label, form > label {
 #SubmitButton {
     width: 150px;
     height: 50px;
-    border: 0.75px solid $color-first;
+    border: 1px solid $color-first;
     background-color: white;
     margin-top: 50px;
 }
