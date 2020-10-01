@@ -22,7 +22,7 @@ const Helpers = () => {
             <p>Organizacjom</p>
             <p>pozarządowym</p>
           </button>
-          <button className="buttons" onClick={() => setOrganizations(true) || setFundations(true)}>
+          <button className="buttons">
             <p>Lokalnym</p>
             <p>zbiórkom</p>
           </button>
@@ -42,7 +42,7 @@ const Helpers = () => {
         </div>
         <div id="FundationsButtons">
           <button className="buttons" onClick={() => setOrganizations(false) || setCollections(false)} ><p>Fundacjom</p></button>
-          <button className="buttons" onClick={() => setFundations(false) || setCollections(false)} >
+          <button className="buttons" >
             <p>Organizacjom</p>
             <p>pozarządowym</p>
           </button>
