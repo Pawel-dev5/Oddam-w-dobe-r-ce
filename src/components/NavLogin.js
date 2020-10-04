@@ -13,6 +13,7 @@ import {OddajRzeczy} from "./OddajRzeczyMain";
 import {CreateAccount} from "./CreateAccount";
 import {NotFound} from "./NotFound";
 import { Login } from "./Login";
+import {LogOut} from "./LogOut"
 
 // Constants
 const ScrollLink = Scroll.Link;
@@ -39,7 +40,7 @@ function NavLogin() {
         <BrowserRouter>
             <>
                 <header>
-                    <nav id="Nav1">
+                    <nav id="Nav2">
                         <ul>
                             {menuItems1.map(item => (
                                 <li key={item.link}>
@@ -97,7 +98,7 @@ function NavLogin() {
                     {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
                     {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
                     <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
-                    <Route path="/logowanie" component={Login} />
+                    <Route path="/wylogowano" component={LogOut} />
                     <Route path="/rejestracja" component={CreateAccount} />
                     <Route component={NotFound} />
                 </Switch>

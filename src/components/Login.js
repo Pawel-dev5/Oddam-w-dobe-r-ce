@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
-// import { NavLogin } from "./NavLogin";
+import { NavLogin } from "./NavLogin";
+import { Nav } from "./Nav";
+
 import UsersAPI from "./Users.js";
 import { Main } from "./Main"
 
@@ -11,7 +13,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [user, setUser] = useState(false);
-  const [isLoggedIn, setLoggedIn] = useState(false)
 
   const submit = e => {
     e.preventDefault();
@@ -28,23 +29,21 @@ const Login = () => {
     })
       .then(user => {
         setUser(user);
-        // setLoggedIn(true);
       })
       .catch(err => {
         setError(err);
       });
-  };
+    };
 
   if (user) {
+    // document.getElementById('NAV').style.display = "none"
+    // URL="/"
     return (
       <>
-        {/* {isLoggedIn ? <NavLogin /> : <Nav />} */}
       <Main user={true}/>
-      
       </>
     );
   }
-  // console.log(user)
 
   return (
     <div id="LoginContainer">
@@ -84,7 +83,8 @@ const Login = () => {
             <button
             id="LoginButtons2" 
             type="submit"
-            // onChange={e => setLoggedIn(true)} 
+            // onChange={submit ? <NavLogin /> : <Nav />}
+            // jak zrobić zmianę url
             >Zaloguj się</button>
           </div>
         </form>
