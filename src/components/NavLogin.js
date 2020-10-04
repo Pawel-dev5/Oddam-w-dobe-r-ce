@@ -8,10 +8,11 @@ import {
 import Scroll from "react-scroll";
 
 // Components
-import {Main} from "./main";
+import {Home} from "./Home";
 import {OddajRzeczy} from "./OddajRzeczyMain";
 import {CreateAccount} from "./CreateAccount";
 import {NotFound} from "./NotFound";
+import { Login } from "./Login";
 
 // Constants
 const ScrollLink = Scroll.Link;
@@ -92,10 +93,11 @@ function NavLogin() {
                     </nav>
                 </header>
                 <Switch>
-                    <Route exact path="/" component={Main} />
+                    <Route exact path="/" component={Home} />
                     {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
                     {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
                     <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
+                    <Route path="/logowanie" component={Login} />
                     <Route path="/rejestracja" component={CreateAccount} />
                     <Route component={NotFound} />
                 </Switch>

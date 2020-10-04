@@ -14,6 +14,7 @@ const Form = () => {
 
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
+
     const submit = e => {
         e.preventDefault();
 
@@ -56,7 +57,7 @@ const Form = () => {
 
         setData(prevState => ({
             ...prevState,
-            [name]: value
+            [name]: value.trim()
         }));
     };
 

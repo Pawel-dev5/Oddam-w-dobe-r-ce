@@ -8,11 +8,12 @@ import {
 import Scroll from "react-scroll";
 
 // Components
-import {Main} from "./main";
+import {Home} from "./Home";
 import {Login} from "./Login";
 import {OddajRzeczy} from "./OddajRzeczyMain";
 import {CreateAccount} from "./CreateAccount";
 import {NotFound} from "./NotFound";
+import { LogOut } from "./LogOut";
 
 // Constants
 const ScrollLink = Scroll.Link;
@@ -21,7 +22,7 @@ const ScrollLink = Scroll.Link;
 // Functions
 
 
-// Navigation function
+// / Navigation function
 function Nav() {
     const menuItems1 = [
         {
@@ -110,12 +111,13 @@ function Nav() {
                     </nav>
                 </header>
                 <Switch>
-                    <Route exact path="/" component={Main} />
+                    <Route exact path="/" component={Home} />
                     {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
                     {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
                     <Route path="/logowanie" component={Login} />
-                    <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
+                    {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
                     <Route path="/rejestracja" component={CreateAccount} />
+                    <Route path="/wylogowano" component={LogOut} />
                     <Route component={NotFound} />
                 </Switch>
             </>

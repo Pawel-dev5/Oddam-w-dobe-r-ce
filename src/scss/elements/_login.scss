@@ -1,12 +1,4 @@
-
-#LoginContainer, #CreateAccountContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#LoginContainerHeader, #CreateAccountContainerHeader{
+#LoginContainerHeader{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +6,7 @@
     text-align: center;
 }
 
-#LoginContainerHeader > h1, #CreateAccountContainerHeader > h1{
+#LoginContainerHeader > h1{
     text-align: center;
     font: normal normal normal 40px/55px $font-primary;
     letter-spacing: -0.8px;
@@ -22,56 +14,109 @@
     opacity: 1;
 }
 
-#LoginForm, #CreateAccountForm {
-    background-color: $color-second;
-    width: 384.5px;
-    height: 235px;
-    margin: 20px 0 20px 0 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#CreateAccountForm {
-    background-color: $color-second;
-    width: 384.5px;
-    height: 328px;
-    margin: 20px 0 20px 0 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#LoginButtons, #CreateAccountButtons{
-    display: flex;
-    align-items: center;
-    width: 550px;
-    justify-content: space-between;
+// #LoginContainer, .LoginFormContainer {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+// }
+// .LoginFormContainer{
+//     background-color: $color-second;
+//     width: 384.5px;
+//     height: 235px;
+//     margin: 20px 0 20px 0 ;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+// }
 
-}
-#LoginButtons1,  #LoginButtons2, #CreateAccountButtons1, #CreateAccountButtons2 {
-    background-color: white;
+// #LoginButtons{
+//     display: flex;
+//     align-items: center;
+//     width: 550px;
+//     justify-content: space-between;
+
+// }
+// #LoginButtons1,  #LoginButtons2{
+//     background-color: white;
+//     font-family: $font-primary;
+//     font-weight: lighter;
+//     font-size: 20px;
+//     border: 0;
+//     padding: 5px 15px 5px 15px;
+
+// }
+// #LoginButtons2{
+//     border: 0.5px solid black;
+// }
+
+// #LoginForm > form{
+//     width: 60%;
+//     input {
+//         background-color: $color-second;
+//         width: 100%;
+//     }
+//     label:nth-child(2) {
+//         margin-top: 40px;
+//     }
+//     label:nth-child(3) {
+//         margin-top: 40px;
+//     }
+// }
+
+#LoginForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: $font-primary;
-    font-weight: lighter;
-    font-size: 20px;
-    border: 0;
-    padding: 5px 15px 5px 15px;
 
-}
-#LoginButtons2, #CreateAccountButtons2 {
-    border: 0.5px solid black;
-}
-
-#LoginForm > form, #CreateAccountForm > form {
-    width: 60%;
-    input {
+    .LoginFormContainer{
         background-color: $color-second;
-        width: 100%;
+        width: 384.5px;
+        height: 235px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        label{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            input{
+                background-color: $color-second;
+            }
+
+        }
     }
-    label:nth-child(2) {
-        margin-top: 40px;
+    #LoginButtons {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    #LoginButtons1,  #LoginButtons2{
+        background-color: white;
+        font-family: $font-primary;
+        font-weight: lighter;
+        font-size: 20px;
+        border: 0;
+        padding: 5px 15px 5px 15px;
     }
-    label:nth-child(3) {
-        margin-top: 40px;
+    #LoginButtons2{
+    border: 0.5px solid black;
+    }
+    }   
+    form {
+        align-items: center;
+        width: 550px;
+        div > label > p{
+            margin-right: 155px;
+        }
+        div > label:nth-child(2) > p{
+            margin-top: 20px;
+        }
     }
 }
