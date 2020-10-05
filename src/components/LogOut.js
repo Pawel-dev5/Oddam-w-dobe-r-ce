@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
-import { NavLogin } from "./NavLogin";
-
+import NavLogin from "./NavLogin";
 
 const LogOut = () => {
   const [login, setLogin] = useState("");
@@ -48,4 +47,4 @@ const LogOut = () => {
   );
 }
 
-export { LogOut };
+export default  LogOut ;

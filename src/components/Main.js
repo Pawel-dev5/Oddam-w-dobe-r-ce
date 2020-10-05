@@ -1,15 +1,17 @@
 import React, {useState} from "react"
-import {Nav} from "./Nav"
-import { NavLogin } from "./NavLogin";
+import Nav from "./Nav"
+import NavLogin from "./NavLogin";
 
-const Main = ({user}) => {
+const Main = (props) => {
   // const [isLoggedIn, setLoggedIn] = useState(false)
   // const isLoggedIn = user;
-  const log = user
-console.log(user)
+  // const log = user
+  const log = true
+console.log(props.user)
+
   return(
     <>
-      {log ? <NavLogin/> :  <Nav />}
+      {props.user ? <NavLogin/> :  <Nav />}
       {/* <Nav/> */}
     </>
   );

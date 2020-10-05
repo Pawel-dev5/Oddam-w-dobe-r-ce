@@ -40,7 +40,6 @@ function Nav({ user }) {
   ]
 
   return (
-    <BrowserRouter>
       <>
         <header id="NAV">
           <nav id="Nav1">
@@ -110,21 +109,11 @@ function Nav({ user }) {
             </ul>
           </nav>
         </header>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
-          {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
-          <Route path="/logowanie" component={Login}/>
-          {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
-          <Route path="/rejestracja" component={CreateAccount} />
-          <Route path="/wylogowano" component={LogOut} />
-          <Route component={NotFound} />
-        </Switch>
+  
       </>
-    </BrowserRouter>
 
   );
 
 }
 
-export { Nav };
+export default Nav ;
