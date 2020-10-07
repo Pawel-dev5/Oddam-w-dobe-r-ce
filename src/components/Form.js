@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Footer} from "./Footer"
+import Footer from "./Footer"
 import Decoration from "../assets/assets/Decoration.svg";
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact";
@@ -142,4 +142,4 @@ const Form = () => {
         </section>
     )
     }
-export {Form};
+export default Form;

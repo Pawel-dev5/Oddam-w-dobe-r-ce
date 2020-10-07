@@ -14,4 +14,4 @@ const OddajRzeczy = () => {
     )
 }
 
-  export {OddajRzeczy};
+  export default OddajRzeczy;

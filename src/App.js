@@ -7,6 +7,7 @@ import {
 import Home from "./components/Home";
 import Login from "./components/Login";
 import LogOut from"./components/LogOut";
+import CreateAccount from "./components/CreateAccount"
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
           <Route path="/logowanie" component={Login}/>
           {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
-          {/* <Route path="/rejestracja" component={CreateAccount} /> */}
+          <Route path="/rejestracja" component={CreateAccount} />
           <Route path="/wylogowano" component={LogOut} />
           {/* <Route component={NotFound} /> */}
         </Switch>

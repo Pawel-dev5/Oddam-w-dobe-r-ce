@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Decoration from "../assets/assets/Decoration.svg";
-import {Fundations} from "./Fundations"
-import {Organizations} from "./Organizations"
-import {LocalCollections} from "./LocalCollections";
+import Fundations from "./Fundations"
+import Organizations from "./Organizations"
+import LocalCollections from "./LocalCollections";
 
 const Helpers = () => {
   const [fundations, setFundations] = useState(false);
@@ -85,4 +85,4 @@ const Helpers = () => {
   }
 }
 
-  export {Helpers};
+  export default Helpers;

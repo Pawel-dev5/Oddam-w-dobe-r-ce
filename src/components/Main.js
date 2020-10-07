@@ -56,4 +56,4 @@ console.log(props.user)
 //   }
 // }
 
-  export {Main};
+  export default Main;

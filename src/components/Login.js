@@ -3,26 +3,38 @@ import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
 import NavLogin from "./NavLogin";
 import Nav from "./Nav";
-
 import UsersAPI from "./Users.js";
-import { Main } from "./Main"
-
 
 const Login = () => {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
+  const [errorPassword, setErrorPassword] = useState("");
   const [user, setUser] = useState(false);
 
   const submit = e => {
     e.preventDefault();
-    const isError = login.length < 3 || password.length < 5;
-    setError("Błędne dane");
+    const isErrorLogin = login.length < 3;
+    const isErrorPassword = password.length < 3;
 
-    if (isError) {
+    
+    if (isErrorLogin) {
+      setErrorLogin("Login nieprawidłowy");
+      
       return;
+    }else {
+      setErrorLogin("")
     }
 
+    if (isErrorPassword) {
+      setErrorPassword("Hasło nieprawidłowe");
+      
+      return;
+    }else {
+      setErrorPassword("")
+    }
+    
     UsersAPI.login({
       username: login,
       password: password
@@ -34,9 +46,6 @@ const Login = () => {
         setError(err);
       });
   };
-  // document.getElementById('NAV').style.display = "none"
-  // URL="/"
-
 
   return (
     <>
@@ -50,14 +59,14 @@ const Login = () => {
 
           <form onSubmit={submit}>
             <div className="LoginFormContainer">
-              {error && <h1>{error}</h1>}
               <label>
                 <p>Email</p>
                 <input
                   type="text"
                   value={login}
                   onChange={e => setLogin(e.target.value)}
-                />
+                  />
+                  {errorLogin && <h1>{errorLogin}</h1>}
               </label>
               <label>
                 <p>Hasło</p>
@@ -66,10 +75,11 @@ const Login = () => {
                   value={password}
                   onChange={e => setPassword(e.target.value)}
                 />
+                {errorPassword && <h1>{errorPassword}</h1>}
               </label>
             </div>
+              {error && <h1>{error}</h1>}
             <div id="LoginButtons">
-
               <Link to="rejestracja">
                 <button id="LoginButtons1">
                   Załóż konto
@@ -80,7 +90,6 @@ const Login = () => {
                 type="submit"
               // onChange={user ? <NavLogin /> : <Nav />}
               // onChange={e => setUser(e.target.value)}
-
               // jak zrobić zmianę url
               >Zaloguj się</button>
             </div>

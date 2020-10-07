@@ -46,4 +46,4 @@ const OddajRzeczyForm = () => {
   )
 }
 
-  export {OddajRzeczyForm};
+  export default OddajRzeczyForm;

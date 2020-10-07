@@ -1,26 +1,8 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  NavLink, Redirect
-} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import Scroll from "react-scroll";
 
-// Components
-import { Home } from "./Home";
-import { Login } from "./Login";
-import { OddajRzeczy } from "./OddajRzeczyMain";
-import { CreateAccount } from "./CreateAccount";
-import { NotFound } from "./NotFound";
-import { LogOut } from "./LogOut";
-
-// Constants
 const ScrollLink = Scroll.Link;
-
-
-// Functions
-
 
 // / Navigation function
 function Nav({ user }) {

@@ -110,4 +110,4 @@ const Organizations = () => {
   )
 }
 
-export {Organizations};
+export default Organizations;

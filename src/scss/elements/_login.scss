@@ -13,59 +13,6 @@
     color: #3C3C3C;
     opacity: 1;
 }
-
-// #LoginContainer, .LoginFormContainer {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-// }
-// .LoginFormContainer{
-//     background-color: $color-second;
-//     width: 384.5px;
-//     height: 235px;
-//     margin: 20px 0 20px 0 ;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-// }
-
-// #LoginButtons{
-//     display: flex;
-//     align-items: center;
-//     width: 550px;
-//     justify-content: space-between;
-
-// }
-// #LoginButtons1,  #LoginButtons2{
-//     background-color: white;
-//     font-family: $font-primary;
-//     font-weight: lighter;
-//     font-size: 20px;
-//     border: 0;
-//     padding: 5px 15px 5px 15px;
-
-// }
-// #LoginButtons2{
-//     border: 0.5px solid black;
-// }
-
-// #LoginForm > form{
-//     width: 60%;
-//     input {
-//         background-color: $color-second;
-//         width: 100%;
-//     }
-//     label:nth-child(2) {
-//         margin-top: 40px;
-//     }
-//     label:nth-child(3) {
-//         margin-top: 40px;
-//     }
-// }
-
 #LoginForm {
     display: flex;
     align-items: center;

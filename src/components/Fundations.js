@@ -150,4 +150,4 @@ const Fundations = () => {
     )
 }
 
-export {Fundations};
+export default Fundations;
