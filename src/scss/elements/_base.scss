@@ -1,19 +1,14 @@
 body {
-    /* background-color: black; */
     font-family: $font-primary;
-
 }
-
 img {
     width: 300px;
     height: 300px;
     /* margin: 25px;
     margin-left: 30px */
 };
-
 li{
     margin-left: 20px;
-
 }
 ul{
     display: flex;
@@ -21,27 +16,21 @@ ul{
     list-style-type: none;
     justify-content: flex-end;
     margin: 20px;
-    /* border: 3px solid black; */
-
-    /* background-color: grey; */
 }
 .App {
     font-family: $font-primary;
     text-align: center;
   }
-  
 .menu-link {
     color: black;
     text-decoration: none;
   }
-  
 .menu-link-active {
     border: 1px solid black;
   }
 #boxReklamowy {
     display: flex;
 }
-
 a {
     margin: 5px;
     padding: 5px 15px 5px 15px;
@@ -52,7 +41,5 @@ a {
 }
 #Nav1 > ul > li:nth-child(2) > a{
     padding: 10px 20px 10px 20px;
-
     border: 1px solid $color-four;
-
 }
