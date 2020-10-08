@@ -1,0 +1,98 @@
+#CreateAccountContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ #CreateAccountContainerHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#CreateAccountContainerHeader > h1{
+    text-align: center;
+    font: normal normal normal 40px/55px $font-primary;
+    letter-spacing: -0.8px;
+    color: #3C3C3C;
+    opacity: 1;
+}
+
+#CreateAccountForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 328px;
+    form {
+        background-color: $color-second;
+        width: 384.5px;
+        height: 100%;
+        margin: 20px 0 20px 0 ;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        label {
+            input:focus-within {
+                 border-bottom: 1px solid red;
+            }
+        }
+    }
+
+}
+.CreateAccountFormContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    label:nth-child(1){
+        margin-top: 180px;
+    }
+    label {
+        h1{
+            color: red;
+            font-family: $font-primary;
+            font-size: 12px;
+            text-align: left;
+        }
+    }
+}
+#CreateAccountButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 550px;
+    justify-content: space-between;
+    margin-top: 120px;
+
+}
+#CreateAccountButtons1, #CreateAccountButtons2 {
+    background-color: white;
+    font-family: $font-primary;
+    font-weight: lighter;
+    font-size: 20px;
+    border: 0;
+    padding: 5px 15px 5px 15px;
+
+}
+#CreateAccountButtons2 {
+    border: 0.5px solid black;
+}
+
+#CreateAccountForm > form {
+    width: 60%;
+    input {
+        background-color: $color-second;
+        width: 100%;
+    }
+    label:nth-child(2) {
+        margin-top: 40px;
+    }
+    label:nth-child(3) {
+        margin-top: 40px;
+    }
+}

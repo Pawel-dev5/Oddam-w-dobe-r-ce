@@ -32,4 +32,4 @@ const LocalCollections = () => {
   )
 }
 
-  export {LocalCollections};
+  export default LocalCollections;

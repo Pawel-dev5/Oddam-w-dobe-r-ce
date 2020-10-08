@@ -5,8 +5,6 @@
     align-items: center;
     background-image: url("../../assets/assets/3\ Columns\ Background.png");
     text-align: center;
-    /* margin-top: 20px; */
-    /* padding: 30px 0 30px 0; */
     color: $color-first;
     font-family: $font-primary;
     font-weight: lighter;
@@ -40,8 +38,6 @@
     font-weight: lighter;
     color: $color-third;
     margin-bottom: 30px;
-
-    /* font: normal normal Open Sans; */
     letter-spacing: 0px;
     opacity: 1;
     }
@@ -50,17 +46,14 @@
 #MainBoxStartDiv {
     width: 50%;
 }
-
 #MainBoxStartDiv > div {
     text-align: center;
     font-size: 20px;
-    
 }
 #MainBoxStartDiv > div > #decoration {
     width: 200px;
     height: 50px;
 }
-
 #MainBoxStartDiv > div:nth-child(2) {
     text-align: center;
 }

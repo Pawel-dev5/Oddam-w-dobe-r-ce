@@ -1,5 +1,5 @@
-import React from "react";
-import {Footer} from "./Footer"
+import React, {useState} from "react";
+import Footer from "./Footer"
 import Decoration from "../assets/assets/Decoration.svg";
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact";
@@ -14,6 +14,7 @@ const Form = () => {
 
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
+
     const submit = e => {
         e.preventDefault();
 
@@ -56,7 +57,7 @@ const Form = () => {
 
         setData(prevState => ({
             ...prevState,
-            [name]: value
+            [name]: value.trim()
         }));
     };
 
@@ -141,4 +142,4 @@ const Form = () => {
         </section>
     )
     }
-export {Form};
+export default Form;

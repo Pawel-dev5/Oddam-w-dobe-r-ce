@@ -26,4 +26,4 @@ const MainAboutUs = () => {
     )
   }
   
-  export {MainAboutUs};
+  export default MainAboutUs;
