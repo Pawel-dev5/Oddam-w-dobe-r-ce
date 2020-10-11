@@ -12,11 +12,10 @@ const Login = () => {
   const [errorLogin, setErrorLogin] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   const [user, setUser] = useState(false);
+    
+
   
-  // const isLogged = user;
-  // console.log(isLogged)
-  
-  // console.log(user)
+  console.log(user)
   const submit = e => {
     e.preventDefault();
     const isErrorLogin = login.length < 5;
@@ -46,7 +45,7 @@ const Login = () => {
         setError(err);
       });
   };
-  
+ 
   return (
     <>
       {user ? <NavLogin /> : <Nav />}

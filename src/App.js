@@ -14,7 +14,7 @@ import NotFound from "./components/NotFound";
 function App(props) {
   // const isLogged = props.user;
   // console.log(isLogged.state);
-
+console.log(props.user)
   return (
     <BrowserRouter>
         <Switch>
@@ -25,19 +25,16 @@ function App(props) {
           {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
           {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
           <Route path="/logowanie"  component={Login}/>
-          {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
-          <Route path="/oddaj-rzeczy">
-            {props.user ? <Login /> : <OddajRzeczy/>}
-          </Route>
+          <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
+          {/* <Route path="/oddaj-rzeczy">
+            {!props.user ? <Login /> : <OddajRzeczy/>}
+          </Route> */}
           <Route path="/rejestracja" component={CreateAccount} />
           <Route path="/wylogowano" component={LogOut} />
           <Route component={NotFound} />
-        </Switch>
-
+        </Switch>s
     </BrowserRouter>
- 
   );
 }
-
 
 export default App;
