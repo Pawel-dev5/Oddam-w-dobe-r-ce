@@ -12,26 +12,26 @@ const Login = () => {
   const [errorLogin, setErrorLogin] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   const [user, setUser] = useState(false);
-
+  
+  // const isLogged = user;
+  // console.log(isLogged)
+  
+  // console.log(user)
   const submit = e => {
     e.preventDefault();
-    const isErrorLogin = login.length < 3;
-    const isErrorPassword = password.length < 3;
+    const isErrorLogin = login.length < 5;
+    const isErrorPassword = password.length < 5; 
 
-    
     if (isErrorLogin) {
       setErrorLogin("Login nieprawidłowy");
-      
       return;
-    }else {
+    } else {
       setErrorLogin("")
     }
-
     if (isErrorPassword) {
       setErrorPassword("Hasło nieprawidłowe");
-      
       return;
-    }else {
+    } else {
       setErrorPassword("")
     }
     
@@ -46,7 +46,7 @@ const Login = () => {
         setError(err);
       });
   };
-
+  
   return (
     <>
       {user ? <NavLogin /> : <Nav />}
@@ -65,8 +65,8 @@ const Login = () => {
                   type="text"
                   value={login}
                   onChange={e => setLogin(e.target.value)}
-                  />
-                  {errorLogin && <h1>{errorLogin}</h1>}
+                />
+                {errorLogin && <h1>{errorLogin}</h1>}
               </label>
               <label>
                 <p>Hasło</p>
@@ -78,7 +78,7 @@ const Login = () => {
                 {errorPassword && <h1>{errorPassword}</h1>}
               </label>
             </div>
-              {error && <h1>{error}</h1>}
+            {error && <h1>{error}</h1>}
             <div id="LoginButtons">
               <Link to="rejestracja">
                 <button id="LoginButtons1">
@@ -88,6 +88,7 @@ const Login = () => {
               <button
                 id="LoginButtons2"
                 type="submit"
+                // user={user}
               // onChange={user ? <NavLogin /> : <Nav />}
               // onChange={e => setUser(e.target.value)}
               // jak zrobić zmianę url
@@ -101,3 +102,4 @@ const Login = () => {
 }
 
 export default Login;
+// export {isLogged}

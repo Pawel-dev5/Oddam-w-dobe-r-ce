@@ -113,7 +113,6 @@ const Form = () => {
                         <img id="decoration" src={Decoration} alt="decoration"></img>
                         <div>
                             <form onSubmit={submit}>
-                                {error}
                                 <div>
                                     <label>
                                         <p>Wpisz swoje imię </p>
@@ -130,6 +129,7 @@ const Form = () => {
                                         <textarea id="text" name="message" onChange={change} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                                     </label>
                                 </div>
+                                {error}
                                 <input id="SubmitButton" type="submit" value="Wyślij" />
                             </form>
                         </div>

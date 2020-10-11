@@ -36,7 +36,12 @@
             input{
                 background-color: $color-second;
             }
-
+            h1 {
+                color: red;
+                font-family: $font-primary;
+                font-size: 12px;
+                text-align: left;
+            }
         }
     }
     #LoginButtons {
@@ -59,6 +64,12 @@
     form {
         align-items: center;
         width: 550px;
+        h1 {
+            color: red;
+            font-family: $font-primary;
+            font-size: 12px;
+            text-align: left;
+        }
         div > label > p{
             margin-right: 155px;
         }

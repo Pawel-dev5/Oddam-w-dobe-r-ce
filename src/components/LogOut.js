@@ -36,15 +36,13 @@ const LogOut = () => {
 
       <div id="LogoutButtons">
         <Link to="/">
-          <button id="LogoutButton" onClick={submit}>
-            <p>
+          <button id="LogoutButton">
               Strona główna
-              </p>
-              </button>
+          </button>
         </Link>
       </div>
     </div>
   );
 }
 
-export default  LogOut ;
+export default LogOut;
