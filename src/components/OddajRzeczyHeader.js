@@ -1,7 +1,6 @@
 import React from "react";
 import Decoration from "../assets/assets/Decoration.svg";
 
-
 const OddajRzeczyHeader = () => {
   return (
     <section id="OddajRzeczyContainer">
@@ -45,5 +44,4 @@ const OddajRzeczyHeader = () => {
     </section>
   )
 }
-
-  export default OddajRzeczyHeader;
+export default OddajRzeczyHeader;

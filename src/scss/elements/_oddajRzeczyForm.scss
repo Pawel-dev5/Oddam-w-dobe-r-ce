@@ -1,10 +1,22 @@
 
-#OddajRzeczyForm {
+#OddajRzeczyForm, #OddajRzeczyForm2 {
     background-image: url("../../assets/assets/Background-Form.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     height: 800px;
+    background-position: center;
+}
+#Step2, #Step3, #Step4, #Step5, #Step6 {
+    display: none;
+}
+
+#OddajRzeczyForm3 {
+    background-image: url("../../assets/assets/Background-Form.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
     background-position: center;
 }
 
@@ -17,8 +29,18 @@
     width: 50%;
     height: 100%;
 }
+#OddajRzeczyForm2 > div, #OddajRzeczyForm3 > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    margin-left: 200px;
+}
 
-#OddajRzeczyForm > div> div {
+#OddajRzeczyForm > div> div, #OddajRzeczyForm2 > div > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -132,29 +154,292 @@
     background-color: $color-four;
 }
 
-#OddajRzeczyForm > div > div > div{
+#OddajRzeczyForm > div > div > div>form{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     height: 500px;
 }
-#OddajRzeczyForm > div > div >p {
+#OddajRzeczyForm > div > div >p, #OddajRzeczyForm2 > div > div > p, #OddajRzeczyForm3 > div > div > p {
     font: normal normal 300 24px/27px $font-primary;
     letter-spacing: 0px;
     color: $color-first;
     opacity: 1;
 }
-#OddajRzeczyForm > div > div >label{
+.OddajRzeczyFormContainer >label{
     font: normal normal 300 24px/32px $font-primary;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+    text-align: left;
+    margin-top: 20px;
 }
 
-#OddajRzeczyForm > div > div > div>h1{
+.OddajRzeczyFormContainer > h1{
     font: normal normal 600 36px/45px $font-primary;
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+    margin-top: 120px;
+    text-align: left;
+}
+#OddajButtonNext, #OddajButtonBack {
+    background-color: $color-second;
+    font-family: $font-primary;
+    font-weight: lighter;
+    font-size: 20px;
+    border: 0;
+    padding: 15px 35px 15px 35px;
+    border: 0.5px solid black;
+    margin-top: 40px;
+}
+#OddajButtonBack{
+    margin-right: 100px;
+}
+.select {
+    width: 150px;
+    height: 49px;
+    border: 0.75px solid #3C3C3C;
+    opacity: 1;
+    margin-top: 50px;
+    font-size: 20px;
+    align-items: center;
+
+    .select-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 86px;
+        height: 185px;
+        border: 0.75px solid #3C3C3C;
+        opacity: 1;
+        background-color: $color-second;
+        font-size: 20px;
+    }
+}
+.select2 {
+    width: 150px;
+    height: 49px;
+    border: 0.75px solid #3C3C3C;
+    opacity: 1;
+    font-size: 20px;
+    align-items: center;
+}
+.OddajButtons {
+    display: flex;
+}
+.OddajRzeczyFormContainer2 {
+    h1 {
+        text-align: center;
+        font: normal normal 600 36px/45px Open Sans;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        text-align: left;
+        margin-top: 50px;
+    }
+    p{
+        text-align: left;
+        font: normal normal 300 24px/32px Open Sans;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        margin-top: 50px;
+        margin-right: 15px;
+    }
+}
+#OddajRzeczyForm3 > div > div >p {
+    text-align: left;
+    margin-bottom: 50px;
+}
+.OddajRzeczyFormContainer3 {
+    align-items: flex-start;
+    width: 900px;
+
+    h1:nth-child(1) {
+        font-size: 24px;
+    }
+    h1,p {
+        text-align: center;
+        font: normal normal 600 20px/45px Open Sans;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        text-align: left;
+    }
+    input {
+        margin-top: 10px;
+        background-color: $color-second;
+        width: 400px;
+        height: 30px;
+        border: 1px solid black;
+    }
+}
+#helpButtonsContainer {
+    flex-wrap: wrap;
+    margin: 0 0 50px 0;
+}
+
+#helpButtons {
+    background-color: $color-second;
+    font-family: $font-primary;
+    font-weight: lighter;
+    font-size: 20px;
+    border: 0;
+    padding: 15px 35px 15px 35px;
+    border: 0.5px solid black;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#helpButtons:focus {
+    background-color: #FAD648;
+}
+.CityChoose{
+    margin: 0 0 50px 0 ;
+}
+
+.TerminBox {
+    margin-left: 100px;
+}
+
+.AdressBox, .TerminBox {
+    height: 311px;
+    p{
+        font: normal normal 600 24px/45px $font-primary;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+    label {
+        display: flex;
+        align-items: flex-end;
+        text-align: left;
+        justify-content: space-between;
+        font: normal normal 300 24px/32px $font-primary;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+            label:nth-child(4) {
+                font: normal normal 300 24px/26px $font-primary;
+            }
+    input {
+        width: 256px;
+        height: 40px;
+        margin-left: 30px;
+        border: 0.3px solid $color-first;
+    }
+}
+#Icon {
+    width: 50px;
+    height: 50px;
+    background: transparent 0% 0% no-repeat padding-box;
+    border: 1px solid #00000000;
+    opacity: 1;
+}
+.Oddajesz {
+    display: flex;
+    flex-direction: column;
+    
+}
+.Oddajesz > div:nth-child(2) {
+    flex-direction: row;
+
+}
+
+.AdressBox, .TerminBox {
+    div{
+        display: flex;
+        flex-direction: row;
+        p{
+            text-align: left;
+            font: normal normal 300 24px/32px Open Sans;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+        }
+    }
+}
+.OddajRzeczyFormContainer4 {
+    align-items: flex-start;
+    width: 900px;
+
+    div:nth-child(2) {
+        
+        div, div:nth-child(2){
+            display: flex;
+            margin-top: 15px;
+        }
+    }
+    h1:nth-child(1) {
+        font-size: 24px;
+    }
+    h1,p {
+        text-align: center;
+        font: normal normal 600 20px/45px $font-primary;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        text-align: left;
+    }
+    input {
+        margin-top: 10px;
+        background-color: $color-second;
+
+    }
+}
+
+#lokaliacja {
+    flex-direction: row;
+}
+#oddajesz {
+    flex-direction: column;
+}
+#FourStepsMove {
+    margin-right: 30px;
+    div {
+        h1{
+            text-align: center;
+            font: normal normal 300 32px/27px $font-primary;
+            letter-spacing: 0px;
+            color: #3C3C3C;
+            opacity: 1;
+            margin-bottom: 30px;
+            margin-top: -40px;
+        }
+        p{
+            text-align: center;
+            font: normal normal 300 22px/27px $font-primary;
+            letter-spacing: 0px;
+            color: #3C3C3C;
+            opacity: 1;
+        }
+    }
+}
+
+.street {
+    margin-left: 100px;
+}
+.postCode {
+    margin-left: 50px;
+}
+.number {
+    margin-left: 60px;
+}
+.data {
+    margin-left: 100px;
+}
+.hour {
+    margin-left: 60px;
+}
+.kurier {
+    margin-left: 40px;
+}
+.city {
+    margin-left: 80px;
 }

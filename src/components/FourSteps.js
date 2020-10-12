@@ -6,7 +6,6 @@ import Icon2 from "../assets/assets/Icon-2.svg";
 import Icon3 from "../assets/assets/Icon-3.svg";
 import Icon4 from "../assets/assets/Icon-4.svg";
 
-
 const FourSteps = () => {
     return (
         <section id="FourSteps">
@@ -58,5 +57,4 @@ const FourSteps = () => {
         </section>
     )
 }
-
   export default FourSteps;

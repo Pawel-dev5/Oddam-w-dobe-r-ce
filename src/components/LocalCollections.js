@@ -31,5 +31,4 @@ const LocalCollections = () => {
     </>
   )
 }
-
-  export default LocalCollections;
+export default LocalCollections;

@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Footer from "./Footer"
 import Decoration from "../assets/assets/Decoration.svg";
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact";
-
 
 const Form = () => {
     const [data, setData] = useState({
@@ -80,7 +79,7 @@ const Form = () => {
                                         </label>
                                         <label>
                                             <p>Wpisz swój email</p>
-                                            <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change}/>
+                                            <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change} />
                                         </label>
                                     </div>
                                     <div>
@@ -113,7 +112,6 @@ const Form = () => {
                         <img id="decoration" src={Decoration} alt="decoration"></img>
                         <div>
                             <form onSubmit={submit}>
-                                {error}
                                 <div>
                                     <label>
                                         <p>Wpisz swoje imię </p>
@@ -121,7 +119,7 @@ const Form = () => {
                                     </label>
                                     <label>
                                         <p>Wpisz swój email</p>
-                                        <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change}/>
+                                        <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change} />
                                     </label>
                                 </div>
                                 <div>
@@ -130,6 +128,7 @@ const Form = () => {
                                         <textarea id="text" name="message" onChange={change} placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                                     </label>
                                 </div>
+                                {error}
                                 <input id="SubmitButton" type="submit" value="Wyślij" />
                             </form>
                         </div>
@@ -141,5 +140,5 @@ const Form = () => {
             </div>
         </section>
     )
-    }
+}
 export default Form;
