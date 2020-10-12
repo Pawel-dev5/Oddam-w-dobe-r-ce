@@ -7,6 +7,9 @@
     height: 800px;
     background-position: center;
 }
+#Step2, #Step3, #Step4, #Step5, #Step6 {
+    display: none;
+}
 
 #OddajRzeczyForm3 {
     background-image: url("../../assets/assets/Background-Form.jpg");
@@ -365,9 +368,9 @@
             color: #000000;
             opacity: 1;
         }
-        p:nth-last-of-type(1){
-            margin-left: 80px;
-        }
+        // p:nth-last-of-type(1){
+        //     margin-left: 80px;
+        // }
     }
 }
 .OddajRzeczyFormContainer4 {
@@ -399,12 +402,53 @@
 
     }
 }
-// .OddajRzeczyFormContainer4 >     div:nth-child(0) {
-//     flex-direction: column;
-// }
+
 #lokaliacja {
     flex-direction: row;
 }
 #oddajesz {
     flex-direction: column;
+}
+#FourStepsMove {
+    margin-right: 30px;
+    div {
+        h1{
+            text-align: center;
+            font: normal normal 300 32px/27px $font-primary;
+            letter-spacing: 0px;
+            color: #3C3C3C;
+            opacity: 1;
+            margin-bottom: 30px;
+            margin-top: -40px;
+        }
+        p{
+            text-align: center;
+            font: normal normal 300 22px/27px $font-primary;
+            letter-spacing: 0px;
+            color: #3C3C3C;
+            opacity: 1;
+        }
+    }
+}
+
+.street {
+    margin-left: 100px;
+}
+.postCode {
+    margin-left: 50px;
+}
+.number {
+    margin-left: 60px;
+}
+.data {
+    margin-left: 100px;
+}
+.hour {
+    margin-left: 60px;
+}
+.kurier {
+    margin-left: 40px;
+}
+.city {
+    margin-left: 80px;
 }

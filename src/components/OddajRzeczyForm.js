@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import IconTrue from "../assets/assets/Icon.png";
 import IconTrue1 from "../assets/assets/Icon1.png";
+import Decoration from "../assets/assets/Decoration.svg";
 
 const OddajRzeczyForm = () => {
   const [worki, setWorki] = useState("");
@@ -13,7 +14,7 @@ const OddajRzeczyForm = () => {
   const [hour, setHour] = useState("");
   const [kurier, setKurier] = useState("");
   const [thing, setThing] = useState("");
-  const [who, setWho] =useState("");
+  const [who, setWho] = useState("");
 
   const handleChangeWho = (e) => {
     setWho(e.target.value);
@@ -33,7 +34,7 @@ const OddajRzeczyForm = () => {
   const handleChangeCity = (e) => {
     setCity(e.target.value)
   }
-  const handleChangePostCode= (e) => {
+  const handleChangePostCode = (e) => {
     setPostCode(e.target.value)
   }
   const handleChangeNumber = (e) => {
@@ -48,9 +49,66 @@ const OddajRzeczyForm = () => {
   const handleChangeKurier = (e) => {
     setKurier(e.target.value)
   }
+
+  const Step2Next = e => {
+    e.preventDefault();
+    if (!thing === false) {
+      document.getElementById("Step2").style.display = "block"
+      document.querySelector("#Step1").style.display = "none"
+    }
+  }
+
+  const Step2Back = e => {
+    e.preventDefault();
+    document.getElementById("Step2").style.display = "none"
+    document.getElementById("Step1").style.display = "block"
+  }
+  const Step3Next = e => {
+    e.preventDefault();
+    if (!worki === false) {
+      document.getElementById("Step3").style.display = "block"
+      document.getElementById("Step2").style.display = "none"
+    }
+  }
+  const Step3Back = e => {
+    e.preventDefault();
+    document.getElementById("Step3").style.display = "none"
+    document.getElementById("Step2").style.display = "block"
+  }
+
+  const Step4Next = e => {
+    e.preventDefault();
+    if (!localization === false && !who === false) {
+      document.getElementById("Step4").style.display = "block"
+      document.getElementById("Step3").style.display = "none"
+    }
+  }
+  const Step4Back = e => {
+    e.preventDefault();
+    document.getElementById("Step4").style.display = "none"
+    document.getElementById("Step3").style.display = "block"
+  }
+  const Step5Next = e => {
+    e.preventDefault();
+    if (!street === false && !city === false && !postCose === false && !number === false && !data === false && !hour === false) {
+      document.getElementById("Step5").style.display = "block"
+      document.getElementById("Step4").style.display = "none"
+    }
+  }
+  const Step5Back = e => {
+    e.preventDefault();
+    document.getElementById("Step5").style.display = "none"
+    document.getElementById("Step4").style.display = "block"
+  }
+  const Step6Next = e => {
+    e.preventDefault();
+    document.getElementById("Step6").style.display = "block"
+    document.getElementById("Step5").style.display = "none"
+
+  }
   return (
     <>
-      <section>
+      <section id="Step1">
         <div id="OddajRzeczyKom">
           <h1>Ważne!</h1>
           <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
@@ -84,7 +142,8 @@ const OddajRzeczyForm = () => {
                   </label>
                   <button
                     id="OddajButtonNext"
-                  // type="submit" 
+                    onClick={Step2Next}
+                    type="button"
                   >Dalej
             </button>
                 </form>
@@ -96,7 +155,7 @@ const OddajRzeczyForm = () => {
         </div>
       </section>
 
-      <section>
+      <section id="Step2">
         <div id="OddajRzeczyKom">
           <h1>Ważne!</h1>
           <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
@@ -121,12 +180,14 @@ const OddajRzeczyForm = () => {
                   <div className="OddajButtons">
                     <button
                       id="OddajButtonBack"
-                    // type="submit" 
+                      type="button"
+                      onClick={Step2Back}
                     >Wróć
                   </button>
                     <button
                       id="OddajButtonNext"
-                    // type="submit" 
+                      type="button"
+                      onClick={Step3Next}
                     >Dalej
                   </button>
                   </div>
@@ -139,7 +200,7 @@ const OddajRzeczyForm = () => {
         </div>
       </section>
 
-      <section>
+      <section id="Step3">
         <div id="OddajRzeczyKom">
           <h1>Ważne!</h1>
           <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
@@ -173,12 +234,14 @@ const OddajRzeczyForm = () => {
                   <div className="OddajButtons">
                     <button
                       id="OddajButtonBack"
-                    // type="submit" 
+                      type="submit"
+                      onClick={Step3Back}
                     >Wróć
                   </button>
                     <button
                       id="OddajButtonNext"
-                    // type="submit" 
+                      type="button"
+                      onClick={Step4Next}
                     >Dalej
                   </button>
                   </div>
@@ -191,7 +254,7 @@ const OddajRzeczyForm = () => {
         </div>
       </section>
 
-      <section>
+      <section id="Step4">
         <div id="OddajRzeczyKom">
           <h1>Ważne!</h1>
           <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
@@ -214,43 +277,43 @@ const OddajRzeczyForm = () => {
                         ></input>
                       </label>
                       <label> Miasto
-                        <input 
-                        type="text"
-                        value={city}
-                        onChange={handleChangeCity}></input>
+                        <input
+                          type="text"
+                          value={city}
+                          onChange={handleChangeCity}></input>
                       </label>
                       <label> Kod <br />pocztowy
-                        <input 
-                        type="text"
-                        value={postCose}
-                        onChange={handleChangePostCode}></input>
+                        <input
+                          type="text"
+                          value={postCose}
+                          onChange={handleChangePostCode}></input>
                       </label>
                       <label> Numer<br /> telefonu
-                        <input 
-                        type="number"
-                        value={number}
-                        onChange={handleChangeNumber}></input>
+                        <input
+                          type="number"
+                          value={number}
+                          onChange={handleChangeNumber}></input>
                       </label>
                     </div>
                     <div className="TerminBox">
                       <p>Termin odbioru:</p>
                       <label> Data
-                        <input 
-                        type="date"
-                        value={data}
-                        onChange={handleChangeData}></input>
+                        <input
+                          type="date"
+                          value={data}
+                          onChange={handleChangeData}></input>
                       </label>
                       <label> Godzina
-                        <input 
-                        type="text"
-                        value={hour}
-                        onChange={handleChangeHour}></input>
+                        <input
+                          type="text"
+                          value={hour}
+                          onChange={handleChangeHour}></input>
                       </label>
                       <label> Uwagi<br /> dla kuriera
-                        <input 
-                        type="text"
-                        value={kurier}
-                        onChange={handleChangeKurier}></input>
+                        <input
+                          type="text"
+                          value={kurier}
+                          onChange={handleChangeKurier}></input>
                       </label>
                     </div>
 
@@ -258,12 +321,14 @@ const OddajRzeczyForm = () => {
                   <div className="OddajButtons">
                     <button
                       id="OddajButtonBack"
-                    // type="submit" 
+                      type="button"
+                      onClick={Step4Back}
                     >Wróć
                   </button>
                     <button
                       id="OddajButtonNext"
-                    // type="submit" 
+                      type="button"
+                      onClick={Step5Next}
                     >Dalej
                   </button>
                   </div>
@@ -276,7 +341,7 @@ const OddajRzeczyForm = () => {
         </div>
       </section>
 
-      <section>
+      <section id="Step5">
         <div id="OddajRzeczyKom">
           <h1>Ważne!</h1>
           <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
@@ -304,50 +369,71 @@ const OddajRzeczyForm = () => {
                     <p>Adres odbioru</p>
                     <div>
                       <p>Ulica</p>
-                      <p>{street}</p>
+                      <p className="street">{street}</p>
                     </div>
                     <div>
                       <p>Miasto</p>
-                      <p>{city}</p>
+                      <p className="city">{city}</p>
                     </div>
                     <div>
-                      <p>Kod<br/>pocztowy</p>
-                      <p>{postCose}</p>
+                      <p>Kod<br />pocztowy</p>
+                      <p className="postCode">{postCose}</p>
                     </div>
                     <div>
-                      <p>Numer<br/>telefonu</p>
-                      <p>{number}</p>
+                      <p>Numer<br />telefonu</p>
+                      <p className="number">{number}</p>
                     </div>
                   </div>
                   <div className="TerminBox">
                     <p>Termin odbioru:</p>
                     <div>
                       <p>Data</p>
-                      <p>{data}</p>
+                      <p className="data">{data}</p>
                     </div>
                     <div>
                       <p>Godzina</p>
-                      <p>{hour}</p>
+                      <p className="hour">{hour}</p>
                     </div>
                     <div>
-                      <p>Uwagi<br/>dla kuriera</p>
-                      <p>{kurier}</p>
+                      <p>Uwagi<br />dla kuriera</p>
+                      <p className="kurier">{kurier}</p>
                     </div>
                   </div>
                 </div>
                 <div className="OddajButtons">
                   <button
                     id="OddajButtonBack"
-                  // type="submit" 
+                    type="submit"
+                    onClick={Step5Back}
                   >Wstecz
                   </button>
                   <button
                     id="OddajButtonNext"
-                  // type="submit" 
+                    type="submit"
+                    onClick={Step6Next}
                   >Potwierdzam
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+          <div id="EmptyDiv">
+          </div>
+        </div>
+      </section>
+
+      <section id="Step6">
+        <div id="OddajRzeczyKom">
+          <h1>Ważne!</h1>
+          <p>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</p>
+        </div>
+        <div id="OddajRzeczyForm3">
+          <div>
+            <div id="OddajRzeczyHeader">
+              <h2>Dziękujemy za przesłanie formularza </h2>
+              <h2>Na maila prześlemy wszelkie </h2>
+              <h2>informacje o odbiorze.</h2>
+              <img id="decoration" src={Decoration} alt="decoration"></img>
             </div>
           </div>
           <div id="EmptyDiv">
