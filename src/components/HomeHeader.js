@@ -41,5 +41,4 @@ const MainBoxStartButtons = () => {
         </div>
     )
 }
-
-  export default MainBoxStart;
+export default MainBoxStart;

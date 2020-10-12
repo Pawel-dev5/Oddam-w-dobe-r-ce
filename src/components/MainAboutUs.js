@@ -3,7 +3,6 @@ import Decoration from "../assets/assets/Decoration.svg";
 import People from "../assets/assets/People.jpg"
 import Signature from "../assets/assets/Signature.svg"
 
-
 const MainAboutUs = () => {
     return (
         <section id="MainAboutUs">
@@ -24,6 +23,5 @@ const MainAboutUs = () => {
             </div>
         </section>
     )
-  }
-  
-  export default MainAboutUs;
+}
+export default MainAboutUs;

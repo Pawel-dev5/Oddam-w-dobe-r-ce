@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Footer from "./Footer"
 import Decoration from "../assets/assets/Decoration.svg";
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact";
-
 
 const Form = () => {
     const [data, setData] = useState({
@@ -80,7 +79,7 @@ const Form = () => {
                                         </label>
                                         <label>
                                             <p>Wpisz swój email</p>
-                                            <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change}/>
+                                            <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change} />
                                         </label>
                                     </div>
                                     <div>
@@ -120,7 +119,7 @@ const Form = () => {
                                     </label>
                                     <label>
                                         <p>Wpisz swój email</p>
-                                        <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change}/>
+                                        <input type="email" name="email" placeholder="abc@xyz.pl" onChange={change} />
                                     </label>
                                 </div>
                                 <div>
@@ -141,5 +140,5 @@ const Form = () => {
             </div>
         </section>
     )
-    }
+}
 export default Form;

@@ -37,12 +37,11 @@ const LogOut = () => {
       <div id="LogoutButtons">
         <Link to="/">
           <button id="LogoutButton">
-              Strona główna
+            Strona główna
           </button>
         </Link>
       </div>
     </div>
   );
 }
-
 export default LogOut;

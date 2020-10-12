@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const MainStats = () => {
   return (
     <section id="MainStats">
@@ -34,4 +33,4 @@ const MainStats = () => {
     </section>
   )
 }
-  export default MainStats;
+export default MainStats;

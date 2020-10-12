@@ -149,5 +149,4 @@ const Fundations = () => {
         </>
     )
 }
-
 export default Fundations;

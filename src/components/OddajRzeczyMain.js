@@ -14,5 +14,4 @@ const OddajRzeczy = () => {
         </>
     )
 }
-
 export default OddajRzeczy;

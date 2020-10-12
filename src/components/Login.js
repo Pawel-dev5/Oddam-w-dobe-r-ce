@@ -12,14 +12,12 @@ const Login = () => {
   const [errorLogin, setErrorLogin] = useState("");
   const [errorPassword, setErrorPassword] = useState("");
   const [user, setUser] = useState(false);
-    
 
-  
-  console.log(user)
+  console.log(user.login)
   const submit = e => {
     e.preventDefault();
     const isErrorLogin = login.length < 5;
-    const isErrorPassword = password.length < 5; 
+    const isErrorPassword = password.length < 5;
 
     if (isErrorLogin) {
       setErrorLogin("Login nieprawidłowy");
@@ -33,7 +31,7 @@ const Login = () => {
     } else {
       setErrorPassword("")
     }
-    
+
     UsersAPI.login({
       username: login,
       password: password
@@ -45,7 +43,7 @@ const Login = () => {
         setError(err);
       });
   };
- 
+
   return (
     <>
       {user ? <NavLogin /> : <Nav />}
@@ -87,7 +85,7 @@ const Login = () => {
               <button
                 id="LoginButtons2"
                 type="submit"
-                // user={user}
+              // user={user}
               // onChange={user ? <NavLogin /> : <Nav />}
               // onChange={e => setUser(e.target.value)}
               // jak zrobić zmianę url
@@ -99,6 +97,4 @@ const Login = () => {
     </>
   );
 }
-
 export default Login;
-// export {isLogged}

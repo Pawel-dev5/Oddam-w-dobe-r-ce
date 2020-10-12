@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Scroll from "react-scroll";
 
 const ScrollLink = Scroll.Link;
@@ -15,9 +15,7 @@ function NavLogin() {
             link: "/oddaj-rzeczy",
             name: "Oddaj rzeczy"
         },
-
     ]
-
     return (
         <>
             <header>
@@ -75,9 +73,6 @@ function NavLogin() {
                 </nav>
             </header>
         </>
-
     );
-
 }
-
 export default NavLogin;
