@@ -32,7 +32,7 @@ console.log(props.user)
           <Route path="/rejestracja" component={CreateAccount} />
           <Route path="/wylogowano" component={LogOut} />
           <Route component={NotFound} />
-        </Switch>s
+        </Switch>
     </BrowserRouter>
   );
 }

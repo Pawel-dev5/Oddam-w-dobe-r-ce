@@ -18,7 +18,6 @@ const OddajRzeczyForm = () => {
   const handleChangeWho = (e) => {
     setWho(e.target.value);
   };
-  console.log(thing)
   const handleChangeThing = (e) => {
     setThing(e.target.value);
   };
@@ -49,8 +48,6 @@ const OddajRzeczyForm = () => {
   const handleChangeKurier = (e) => {
     setKurier(e.target.value)
   }
-
-
   return (
     <>
       <section>
@@ -63,26 +60,26 @@ const OddajRzeczyForm = () => {
             <div>
               <p>Krok 1/4</p>
               <div>
-                <form className="OddajRzeczyFormContainer" value={thing} onChange={handleChangeThing}>
+                <form className="OddajRzeczyFormContainer" >
                   <h1>Zaznacz co chcesz oddać:</h1>
-                  <label className="container"  >ubrania, które nadają się do ponownego użycia
-                    <input type="checkbox" ></input>
-                    <span className="checkmark" ></span>
+                  <label className="container" >ubrania, które nadają się do ponownego użycia
+                    <input type="checkbox" value="ubrania, które nadają się do ponownego użycia" onClick={handleChangeThing} ></input>
+                    <span className="checkmark"></span>
                   </label>
                   <label className="container">ubrania, do wyrzucenia
-                    <input type="checkbox"></input>
+                    <input type="checkbox" value="ubrania, do wyrzucenia" onClick={handleChangeThing} ></input>
                     <span className="checkmark"></span>
                   </label>
                   <label className="container">zabawki
-                    <input type="checkbox"></input>
+                    <input type="checkbox" value="zabawki" onClick={handleChangeThing} ></input>
                     <span className="checkmark"></span>
                   </label>
                   <label className="container">książki
-                    <input type="checkbox"></input>
+                    <input type="checkbox" value="książki" onClick={handleChangeThing}></input>
                     <span className="checkmark"></span>
                   </label>
                   <label className="container">Inne
-                    <input type="checkbox"></input>
+                    <input type="checkbox" value="Inne" onClick={handleChangeThing}></input>
                     <span className="checkmark"></span>
                   </label>
                   <button
@@ -165,11 +162,11 @@ const OddajRzeczyForm = () => {
                   </div>
                   <p>Komu chcesz pomóc?</p>
                   <div id="helpButtonsContainer">
-                    <button id="helpButtons" value={who} onChange={handleChangeWho}>dzieciom</button>
-                    <button id="helpButtons">samotnym matkom</button>
-                    <button id="helpButtons">bezdomnym</button>
-                    <button id="helpButtons">niepełnosprawnym</button>
-                    <button id="helpButtons">osobom starszym</button>
+                    <button id="helpButtons" type="button" value="dzieciom" onClick={handleChangeWho}>dzieciom</button>
+                    <button id="helpButtons" type="button" value="samotnym matkom" onClick={handleChangeWho}>samotnym matkom</button>
+                    <button id="helpButtons" type="button" value="bezdomnym" onClick={handleChangeWho}>bezdomnym</button>
+                    <button id="helpButtons" type="button" value="niepełnosprawnym" onClick={handleChangeWho}>niepełnosprawnym</button>
+                    <button id="helpButtons" type="button" value="osobom starszym" onClick={handleChangeWho}>osobom starszym</button>
                   </div>
                   <p>Wpisz nazwę konkretnej organizacji (opcjonalnie)</p>
                   <input type="text"></input>
@@ -230,7 +227,7 @@ const OddajRzeczyForm = () => {
                       </label>
                       <label> Numer<br /> telefonu
                         <input 
-                        type="text"
+                        type="number"
                         value={number}
                         onChange={handleChangeNumber}></input>
                       </label>
@@ -239,7 +236,7 @@ const OddajRzeczyForm = () => {
                       <p>Termin odbioru:</p>
                       <label> Data
                         <input 
-                        type="text"
+                        type="date"
                         value={data}
                         onChange={handleChangeData}></input>
                       </label>
