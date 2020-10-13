@@ -4,35 +4,23 @@ import Scroll from "react-scroll";
 
 const ScrollLink = Scroll.Link;
 
-// Navigation function
-function NavLogin() {
-    const menuItems1 = [
-        {
-            link: "/wylogowano",
-            name: "Wyloguj"
-        },
-        {
-            link: "/oddaj-rzeczy",
-            name: "Oddaj rzeczy"
-        },
-    ]
+function NavLogin({ handleLogout }) {
     return (
         <>
             <header>
                 <nav id="Nav2">
                     <ul>
-                        {menuItems1.map(item => (
-                            <li key={item.link}>
-                                <NavLink
-                                    exact={item.link === "/"}
-                                    to={item.link}
-                                    className="menu-link"
-                                    activeClassName="menu-link-active"
-                                >
-                                    {item.name}
-                                </NavLink>
-                            </li>
-                        ))}
+                        <li>
+                            {/* <a> */}
+                                <NavLink exact to="/oddaj-rzeczy" className="menu-link"
+                                    activeClassName="menu-link-active" >Oddaj Rzeczy</NavLink>
+                            {/* </a> */}
+                        </li>
+                        <li>
+                            <NavLink exact to="/wylogowano" className="menu-link"
+                                activeClassName="menu-link-active" >
+                                <button onClick={handleLogout} className="LogOutButton">Wyloguj</button></NavLink>
+                        </li>
                     </ul>
                 </nav>
                 <nav>

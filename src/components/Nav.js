@@ -5,7 +5,7 @@ import Scroll from "react-scroll";
 const ScrollLink = Scroll.Link;
 
 // / Navigation function
-function Nav({ user }) {
+function Nav() {
   const menuItems1 = [
     {
       link: "/logowanie",
