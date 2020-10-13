@@ -5,14 +5,10 @@ import FourSteps from "./FourSteps"
 import MainAboutUs from "./MainAboutUs"
 import Helpers from "./Helpers"
 import Form from "./Form"
-import Nav from "./Nav"
-import NavLogin from "./NavLogin"
 
-const Home = (props) => {
-  console.log(props.user)
+const Home = () => {
   return (
     <>
-      {props.user ? <NavLogin /> : <Nav />}
       <MainBoxStart />
       <MainStats />
       <FourSteps />

@@ -13,8 +13,6 @@ import OddajRzeczy from "./components/OddajRzeczyMain";
 import NotFound from "./components/NotFound";
 import NavLogin from "./components/NavLogin";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-
 
 const App = () => {
   const [user, setUser] = useState('');
@@ -40,7 +38,7 @@ const App = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(err => {
-        switch(err.code) {
+        switch (err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
           case "auth/user-not-found":
@@ -59,7 +57,7 @@ const App = () => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(err => {
-        switch(err.code) {
+        switch (err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
             setEmailError(err.message);
@@ -92,53 +90,82 @@ const App = () => {
 
   return (
     <>
-      {/* <BrowserRouter>
-      <Switch> */}
-      {/* {user ? <NavLogin /> : <Nav />}  */}
-      {/* <Route path="/"> 
-            <Home user={user} ></Home>
-          </Route> */}
-      {/* <Route exact path="/" component={Home} /> */}
-      {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
-      {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
-    
-      {/* /> */}
-      {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
-      {/* <Route path="/oddaj-rzeczy">
-            {!props.user ? <Login /> : <OddajRzeczy/>}
-          </Route> */}
-      {/* <Route path="/rejestracja" component={CreateAccount} />
-        <Route path="/wylogowano" component={LogOut} />
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter> */}
       <BrowserRouter >
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
-          <Route path="/rejestracja" component={CreateAccount} />
-
-          <div>
-            {user ? <NavLogin /> : <Nav />}
+          <Route path="/rejestracja" >
+            <CreateAccount
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              handleLogin={handleLogin}
+              handleSignup={handleSignup}
+              hasAccount={hasAccount}
+              setHasAccount={setHasAccount}
+              emailError={emailError}
+              passwordError={passwordError}
+            />
+          </Route>
+          <Route exact path="/" >
             {user ? (
-              <Hero handleLogout={handleLogout} />
+              <>
+                <NavLogin handleLogout={handleLogout} />
+                <Home />
+              </>
             ) : (
-                <Login
-                  // component={Login}
-                  email={email}
-                  setEmail={setEmail}
-                  password={password}
-                  setPassword={setPassword}
-                  handleLogin={handleLogin}
-                  handleSignup={handleSignup}
-                  hasAccount={hasAccount}
-                  setHasAccount={setHasAccount}
-                  emailError={emailError}
-                  passwordError={passwordError}
-                />
+                <>
+                  <Nav />
+                  <Home />
+                </>
               )}
-            {/* <Hero handleLogout={handleLogout} /> */}
-          </div>
+          </Route>
+          <Route path="/wylogowano"  >
+            <LogOut
+              handleLogout={handleLogout}
+            />
+          </Route>
+          {user ? (
+            <Route path="/oddaj-rzeczy">
+              <OddajRzeczy />
+            </Route>
+          ) : (
+              <Login
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                handleLogin={handleLogin}
+                handleSignup={handleSignup}
+                hasAccount={hasAccount}
+                setHasAccount={setHasAccount}
+                emailError={emailError}
+                passwordError={passwordError}
+              />
+            )}
+          {user ? (
+            <>
+              <NavLogin />
+              <Home />
+            </>
+          ) : (
+              <>
+                <Route path="/logowanie" >
+                  <Login
+                    email={email}
+                    setEmail={setEmail}
+                    password={password}
+                    setPassword={setPassword}
+                    handleLogin={handleLogin}
+                    handleSignup={handleSignup}
+                    hasAccount={hasAccount}
+                    setHasAccount={setHasAccount}
+                    emailError={emailError}
+                    passwordError={passwordError}
+                  />
+                </Route>
+              </>
+            )}
+          <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
     </>
