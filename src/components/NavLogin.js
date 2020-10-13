@@ -11,11 +11,15 @@ function NavLogin({ handleLogout }) {
                 <nav id="Nav2">
                     <ul>
                         <li>
+                            {/* <a> */}
+                                <NavLink exact to="/oddaj-rzeczy" className="menu-link"
+                                    activeClassName="menu-link-active" >Oddaj Rzeczy</NavLink>
+                            {/* </a> */}
+                        </li>
+                        <li>
                             <NavLink exact to="/wylogowano" className="menu-link"
                                 activeClassName="menu-link-active" >
-                                <button onClick={handleLogout}>Wyloguj</button></NavLink>
-                            <NavLink exact to="/oddaj-rzeczy" className="menu-link"
-                                activeClassName="menu-link-active" >Oddaj Rzeczy</NavLink>
+                                <button onClick={handleLogout} className="LogOutButton">Wyloguj</button></NavLink>
                         </li>
                     </ul>
                 </nav>

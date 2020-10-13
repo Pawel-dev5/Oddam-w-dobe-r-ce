@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
 import Nav from "./Nav";
 import NavLogin from "./NavLogin";
@@ -27,26 +28,25 @@ const CreateAccount = (props) => {
           <div className="CreateAccountFormContainer">
             <label>
               <p>Email</p>
+              <input
+                type="text"
+                autoFocus
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </label>
-            <input
-              type="text"
-              autoFocus
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <p className="errorMsg">{emailError}</p>
+            {emailError && <h1>{emailError}</h1>}
             <label>
               <p>Hasło</p>
+              <input
+                type="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </label>
-            <input
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-
-            <p className="errorMsg">{passwordError}</p>
+            {passwordError && <h1>{passwordError}</h1>}
             <label>
               <p>Powtórz hasło</p>
               <input
@@ -55,7 +55,9 @@ const CreateAccount = (props) => {
             </label>
           </div>
           <div id="CreateAccountButtons">
+            <Link to="/logowanie">
             <button id="CreateAccountButtons2">Zaloguj się</button>
+            </Link>
             <button id="CreateAccountButtons1" onClick={handleSignup}>
               Załóż konto
             </button>

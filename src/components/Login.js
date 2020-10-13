@@ -29,35 +29,35 @@ const Login = (props) => {
             <div className="LoginFormContainer">
               <label>
                 <p>Email</p>
+                <input
+                  type="text"
+                  autoFocus
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </label>
-              <input
-                type="text"
-                autoFocus
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
               {emailError && <h1>{emailError}</h1>}
               <label>
                 <p>Hasło</p>
+                <input
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </label>
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
               {passwordError && <h1>{passwordError}</h1>}
             </div>
             <div id="LoginButtons">
               <Link to="rejestracja">
-              <button id="LoginButtons1">
+                <button id="LoginButtons1">
                   Załóż konto
                   </button>
               </Link>
               <button
-              id="LoginButtons2"
-              onClick={handleLogin}
+                id="LoginButtons2"
+                onClick={handleLogin}
               >Zaloguj się</button>
             </div>
           </div>

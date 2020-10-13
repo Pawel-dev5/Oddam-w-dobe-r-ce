@@ -27,32 +27,36 @@
     align-items: center;
     justify-content: center;
     height: 328px;
-    form {
-        background-color: $color-second;
-        width: 384.5px;
-        height: 100%;
-        margin: 20px 0 20px 0 ;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        label {
-            input:focus-within {
-                 border-bottom: 1px solid red;
-            }
+    background-color: $color-second;
+    width: 384.5px;
+    margin: 20px 0 20px 0 ;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    label {
+        input{
+            border: 0;
+            background-color: $color-second;
+            border-bottom: 0.5px solid black;
+        }
+        input:focus-within {
+                border-bottom: 1px solid red;
         }
     }
-
 }
 .CreateAccountFormContainer {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     width: 60%;
     align-items: center;
     justify-content: center;
+    text-align: left;
     label:nth-child(1){
-        margin-top: 180px;
+        margin-top: 100px;
     }
     label {
+        margin-top: 40px;
         h1{
             color: red;
             font-family: $font-primary;
@@ -77,22 +81,10 @@
     font-size: 20px;
     border: 0;
     padding: 5px 15px 5px 15px;
+    margin-top: 10px;
 
 }
 #CreateAccountButtons2 {
     border: 0.5px solid black;
 }
 
-#CreateAccountForm > form {
-    width: 60%;
-    input {
-        background-color: $color-second;
-        width: 100%;
-    }
-    label:nth-child(2) {
-        margin-top: 40px;
-    }
-    label:nth-child(3) {
-        margin-top: 40px;
-    }
-}
