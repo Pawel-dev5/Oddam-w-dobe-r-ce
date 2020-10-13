@@ -14,14 +14,9 @@ import NotFound from "./components/NotFound";
 import NavLogin from "./components/NavLogin";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-// import { BrowserRouter, Switch } from "react-router-dom";
 
 
-function App() {
-  // const isLogged = props.user;
-  // console.log(isLogged.state);
-  // console.log(props.user)
-
+const App = () => {
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -45,7 +40,7 @@ function App() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(err => {
-        switch (err.code) {
+        switch(err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
           case "auth/user-not-found":
@@ -64,7 +59,7 @@ function App() {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(err => {
-        switch (err.code) {
+        switch(err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
             setEmailError(err.message);
@@ -106,18 +101,7 @@ function App() {
       {/* <Route exact path="/" component={Home} /> */}
       {/* <Route path={LINKS_CONFIG.Onas} component={About} /> */}
       {/* <Route path="/Ocochodzi/:carId" component={CarDetails} /> */}
-      {/* <Route path="/logowanie" 
-        component={Login} 
-        email={email} 
-        setEmail={setEmail} 
-        password={setPassword} 
-        setPassword={setPassword} 
-        handleLogin={handleLogin} 
-        handleSignup={handleSignup} 
-        hasAccount={hasAccount}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError} */}
+    
       {/* /> */}
       {/* <Route path="/oddaj-rzeczy" component={OddajRzeczy} /> */}
       {/* <Route path="/oddaj-rzeczy">

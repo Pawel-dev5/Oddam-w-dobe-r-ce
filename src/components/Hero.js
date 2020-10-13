@@ -3,7 +3,7 @@ import React from "react";
 const Hero = ({ handleLogout }) => {
     return (
 
-    <section>
+    <section className="hero">
         <nav>
             <h1>Welcome!</h1>
             <button onClick={handleLogout}>LogOut</button>

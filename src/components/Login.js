@@ -6,44 +6,6 @@ import Nav from "./Nav";
 import UsersAPI from "./Users.js";
 
 const Login = (props) => {
-  // const [login, setLogin] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [error, setError] = useState("");
-  // const [errorLogin, setErrorLogin] = useState("");
-  // const [errorPassword, setErrorPassword] = useState("");
-  // const [user, setUser] = useState(false);
-
-  // console.log(user.login)
-  // const submit = e => {
-  //   e.preventDefault();
-  //   const isErrorLogin = login.length < 5;
-  //   const isErrorPassword = password.length < 5;
-
-  //   if (isErrorLogin) {
-  //     setErrorLogin("Login nieprawidłowy");
-  //     return;
-  //   } else {
-  //     setErrorLogin("")
-  //   }
-  //   if (isErrorPassword) {
-  //     setErrorPassword("Hasło nieprawidłowe");
-  //     return;
-  //   } else {
-  //     setErrorPassword("")
-  //   }
-
-  //   UsersAPI.login({
-  //     username: login,
-  //     password: password
-  //   })
-  //     .then(user => {
-  //       setUser(user);
-  //     })
-  //     .catch(err => {
-  //       setError(err);
-  //     });
-  // };
-
   const {
     email,
     setEmail,
@@ -61,17 +23,20 @@ const Login = (props) => {
     <>
       {/* {user ? <NavLogin /> : <Nav />} */}
       {/* <Nav/> */}
-      <div id="LoginContainer" className="login">
+      <section className="login">
+
+      <div id="LoginContainer" className="loginContainer">
         <div id="LoginContainerHeader">
           <h1>Zaloguj się</h1>
           <img id="decoration" src={Decoration} alt="decoration"></img>
         </div>
         <div id="LoginForm">
 
-          <form >
+          {/* <form > */}
             <div className="LoginFormContainer">
               <label>
                 <p>Email</p>
+                </label>
                 <input
                   type="text"
                   autoFocus
@@ -83,17 +48,16 @@ const Login = (props) => {
                 />
                 <p className="errorMsg">{emailError}</p>
                 {/* {errorLogin && <h1>{errorLogin}</h1>} */}
-              </label>
               <label>
                 <p>Hasło</p>
+                </label>
                 <input
                   type="password"
-                  autoFocus
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   />
-                  </label>
+                  
                 <p className="errorMsg">{passwordError}</p>
                 {/* {errorPassword && <h1>{errorPassword}</h1>} */}
               {/* </label> */}
@@ -132,9 +96,10 @@ const Login = (props) => {
               // jak zrobić zmianę url
               >Zaloguj się</button> */}
             </div>
-          </form>
+          {/* </form> */}
         </div>
       </div>
+      </section>
     </>
   );
 }
