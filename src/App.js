@@ -20,7 +20,6 @@ const App = () => {
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
-  const [hasAccount, setHasAccount] = useState(false);
 
   const clearInputs = () => {
     setEmail('');
@@ -38,7 +37,7 @@ const App = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(err => {
-        switch (err.code) {
+        switch(err.code) {
           case "auth/invalid-email":
           case "auth/user-disabled":
           case "auth/user-not-found":
@@ -57,7 +56,7 @@ const App = () => {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(err => {
-        switch (err.code) {
+        switch(err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
             setEmailError(err.message);
@@ -98,10 +97,7 @@ const App = () => {
               setEmail={setEmail}
               password={password}
               setPassword={setPassword}
-              handleLogin={handleLogin}
               handleSignup={handleSignup}
-              hasAccount={hasAccount}
-              setHasAccount={setHasAccount}
               emailError={emailError}
               passwordError={passwordError}
             />
@@ -136,8 +132,6 @@ const App = () => {
                 setPassword={setPassword}
                 handleLogin={handleLogin}
                 handleSignup={handleSignup}
-                hasAccount={hasAccount}
-                setHasAccount={setHasAccount}
                 emailError={emailError}
                 passwordError={passwordError}
               />
@@ -156,9 +150,6 @@ const App = () => {
                     password={password}
                     setPassword={setPassword}
                     handleLogin={handleLogin}
-                    handleSignup={handleSignup}
-                    hasAccount={hasAccount}
-                    setHasAccount={setHasAccount}
                     emailError={emailError}
                     passwordError={passwordError}
                   />

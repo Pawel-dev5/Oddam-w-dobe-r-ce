@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Decoration from "../assets/assets/Decoration.svg";
 import Nav from "./Nav";
 import NavLogin from "./NavLogin";
@@ -9,10 +9,7 @@ const CreateAccount = (props) => {
     setEmail,
     password,
     setPassword,
-    handleLogin,
     handleSignup,
-    hasAccount,
-    setHasAccount,
     emailError,
     passwordError,
     user,
@@ -28,41 +25,41 @@ const CreateAccount = (props) => {
         </div>
         <div id="CreateAccountForm">
           <div className="CreateAccountFormContainer">
-          <label>
-                <p>Email</p>
-                </label>
-                <input
-                  type="text"
-                  autoFocus
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <p className="errorMsg">{emailError}</p>
-                <label>
-                <p>Hasło</p>
-                </label>
-                <input
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  />
-                  
-                <p className="errorMsg">{passwordError}</p>
+            <label>
+              <p>Email</p>
+            </label>
+            <input
+              type="text"
+              autoFocus
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <p className="errorMsg">{emailError}</p>
+            <label>
+              <p>Hasło</p>
+            </label>
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <p className="errorMsg">{passwordError}</p>
             <label>
               <p>Powtórz hasło</p>
               <input
                 type="password"
-                />
+              />
             </label>
-            </div>
-            <div id="CreateAccountButtons">
-              <button id="CreateAccountButtons2">Zaloguj się</button>
+          </div>
+          <div id="CreateAccountButtons">
+            <button id="CreateAccountButtons2">Zaloguj się</button>
             <button id="CreateAccountButtons1" onClick={handleSignup}>
               Załóż konto
             </button>
-            </div>
+          </div>
         </div>
       </div>
     </>

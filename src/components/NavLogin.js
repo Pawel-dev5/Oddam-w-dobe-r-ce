@@ -4,7 +4,6 @@ import Scroll from "react-scroll";
 
 const ScrollLink = Scroll.Link;
 
-// Navigation function
 function NavLogin({ handleLogout }) {
     return (
         <>
