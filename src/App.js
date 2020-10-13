@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import fire from "./components/fire";
-// import {
-//   BrowserRouter,
-//   Route,
-//   Switch,
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import LogOut from "./components/LogOut";
@@ -14,6 +14,7 @@ import NotFound from "./components/NotFound";
 import NavLogin from "./components/NavLogin";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+// import { BrowserRouter, Switch } from "react-router-dom";
 
 
 function App() {
@@ -127,26 +128,35 @@ function App() {
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter> */}
-    <div>
-      {user ? (
-        <Hero handleLogout={handleLogout} />
-      ) : (
-          <Login
-            component={Login}
-            email={email}
-            setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
-            handleLogin={handleLogin}
-            handleSignup={handleSignup}
-            hasAccount={hasAccount}
-            setHasAccount={setHasAccount}
-            emailError={emailError}
-            passwordError={passwordError}
-          />
-        )}
-      {/* <Hero handleLogout={handleLogout} /> */}
-    </div>
+      <BrowserRouter >
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/oddaj-rzeczy" component={OddajRzeczy} />
+          <Route path="/rejestracja" component={CreateAccount} />
+
+          <div>
+            {user ? <NavLogin /> : <Nav />}
+            {user ? (
+              <Hero handleLogout={handleLogout} />
+            ) : (
+                <Login
+                  // component={Login}
+                  email={email}
+                  setEmail={setEmail}
+                  password={password}
+                  setPassword={setPassword}
+                  handleLogin={handleLogin}
+                  handleSignup={handleSignup}
+                  hasAccount={hasAccount}
+                  setHasAccount={setHasAccount}
+                  emailError={emailError}
+                  passwordError={passwordError}
+                />
+              )}
+            {/* <Hero handleLogout={handleLogout} /> */}
+          </div>
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }
