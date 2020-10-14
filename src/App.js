@@ -124,10 +124,6 @@ const App = () => {
     });
   };
 
-  // useEffect(() => {
-  //   authListener();
-  // }, [])
-
   useEffect(() => {
     function authListener() {
     };
