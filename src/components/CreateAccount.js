@@ -14,6 +14,9 @@ const CreateAccount = (props) => {
     emailError,
     passwordError,
     user,
+    password2,
+    setPassword2,
+    errorPassword2,
   } = props;
 
   return (
@@ -51,7 +54,10 @@ const CreateAccount = (props) => {
               <p>Powtórz hasło</p>
               <input
                 type="password"
+                value={password2}
+                onChange={(e) => setPassword2(e.target.value)}
               />
+              <h1>{errorPassword2}</h1>
             </label>
           </div>
           <div id="CreateAccountButtons">

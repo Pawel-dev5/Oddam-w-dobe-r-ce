@@ -57,13 +57,14 @@
     }
     label {
         margin-top: 40px;
-        h1{
-            color: red;
-            font-family: $font-primary;
-            font-size: 12px;
-            text-align: left;
-        }
     }
+            h1{
+                color: red;
+                font-family: $font-primary;
+                font-size: 12px;
+                text-align: center;
+                margin-top: 10px;
+            }
 }
 #CreateAccountButtons{
     display: flex;

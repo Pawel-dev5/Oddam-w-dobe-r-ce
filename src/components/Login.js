@@ -37,7 +37,7 @@ const Login = (props) => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </label>
-              {emailError && <h1>{emailError}</h1>}
+              <h1>{emailError}</h1>
               <label>
                 <p>Hasło</p>
                 <input
