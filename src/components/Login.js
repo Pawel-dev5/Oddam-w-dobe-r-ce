@@ -1,7 +1,5 @@
 import React from "react";
 import Decoration from "../assets/assets/Decoration.svg";
-import NavLogin from "./NavLogin";
-import Nav from "./Nav";
 import { Link } from "react-router-dom";
 
 const Login = (props) => {
@@ -13,12 +11,10 @@ const Login = (props) => {
     handleLogin,
     emailError,
     passwordError,
-    user,
   } = props;
 
   return (
     <>
-      {user ? <NavLogin /> : <Nav />}
       <section className="login">
         <div id="LoginContainer" className="loginContainer">
           <div id="LoginContainerHeader">

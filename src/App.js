@@ -24,7 +24,7 @@ const App = () => {
   const [errorPassword2, setErrorPassword2] = useState("");
 
   const clearInputs = () => {
-    setEmail('');
+    // setEmail('');
     setPassword('');
     setPassword2('');
   }
@@ -105,12 +105,15 @@ const App = () => {
             setPasswordError(err.message);
             break;
           default:
+            handleLogout();
         }
       });
+    setEmail('');
   };
 
   const handleLogout = () => {
     fire.auth().signOut();
+    setEmail('');
   };
 
   const authListener = () => {
@@ -136,23 +139,26 @@ const App = () => {
       <BrowserRouter >
         <Switch>
           <Route path="/rejestracja" >
-            <CreateAccount
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              handleSignup={handleSignup}
-              emailError={emailError}
-              passwordError={passwordError}
-              password2={password2}
-              setPassword2={setPassword2}
-              errorPassword2={errorPassword2}
-            />
+            <>
+              {user ? <NavLogin /> : <Nav />}
+              <CreateAccount
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                handleSignup={handleSignup}
+                emailError={emailError}
+                passwordError={passwordError}
+                password2={password2}
+                setPassword2={setPassword2}
+                errorPassword2={errorPassword2}
+              />
+            </>
           </Route>
           <Route exact path="/" >
             {user ? (
               <>
-                <NavLogin handleLogout={handleLogout} />
+                <NavLogin handleLogout={handleLogout} email={email} />
                 <Home />
               </>
             ) : (
@@ -169,38 +175,47 @@ const App = () => {
           </Route>
           {user ? (
             <Route path="/oddaj-rzeczy">
-              <OddajRzeczy />
+              <>
+                <NavLogin handleLogout={handleLogout} email={email} />
+                <OddajRzeczy />
+              </>
             </Route>
           ) : (
-              <Login
-                email={email}
-                setEmail={setEmail}
-                password={password}
-                setPassword={setPassword}
-                handleLogin={handleLogin}
-                handleSignup={handleSignup}
-                emailError={emailError}
-                passwordError={passwordError}
-                setPassword2={setPassword2}
-              />
+              <>
+                {user ? <NavLogin /> : <Nav />}
+                <Login
+                  email={email}
+                  setEmail={setEmail}
+                  password={password}
+                  setPassword={setPassword}
+                  handleLogin={handleLogin}
+                  handleSignup={handleSignup}
+                  emailError={emailError}
+                  passwordError={passwordError}
+                  setPassword2={setPassword2}
+                />
+              </>
             )}
           {user ? (
             <>
-              <NavLogin />
+              <NavLogin handleLogout={handleLogout} email={email} />
               <Home />
             </>
           ) : (
               <>
                 <Route path="/logowanie" >
-                  <Login
-                    email={email}
-                    setEmail={setEmail}
-                    password={password}
-                    setPassword={setPassword}
-                    handleLogin={handleLogin}
-                    emailError={emailError}
-                    passwordError={passwordError}
-                  />
+                  <>
+                    {user ? <NavLogin /> : <Nav />}
+                    <Login
+                      email={email}
+                      setEmail={setEmail}
+                      password={password}
+                      setPassword={setPassword}
+                      handleLogin={handleLogin}
+                      emailError={emailError}
+                      passwordError={passwordError}
+                    />
+                  </>
                 </Route>
               </>
             )}

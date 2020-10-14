@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
-import Nav from "./Nav";
-import NavLogin from "./NavLogin";
 
 const CreateAccount = (props) => {
   const {
@@ -13,7 +11,6 @@ const CreateAccount = (props) => {
     handleSignup,
     emailError,
     passwordError,
-    user,
     password2,
     setPassword2,
     errorPassword2,
@@ -21,7 +18,6 @@ const CreateAccount = (props) => {
 
   return (
     <>
-      {user ? <NavLogin /> : <Nav />}
       <div id="CreateAccountContainer">
         <div id="CreateAccountContainerHeader">
           <h1>Załóż konto</h1>
