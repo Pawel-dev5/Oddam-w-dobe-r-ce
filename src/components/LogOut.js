@@ -1,29 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Decoration from "../assets/assets/Decoration.svg";
-import NavLogin from "./NavLogin";
+import Nav from "./Nav";
 
 const LogOut = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
-
-  const submit = e => {
-    e.preventDefault();
-
-    setLogin("");
-    setPassword("");
-    setUser(null);
-
-  };
-
-  if (user) {
-    return (
-      <NavLogin />
-    );
-  }
-
   return (
+    <>
+    <Nav/>
     <div id="LogoutContainer">
       <div id="LogoutContainerHeader">
         <h1>
@@ -42,6 +25,7 @@ const LogOut = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 }
 export default LogOut;

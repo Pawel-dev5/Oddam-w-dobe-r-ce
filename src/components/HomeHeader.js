@@ -32,7 +32,7 @@ const MainBoxStartButtons = () => {
                     <p>RZECZY</p>
                 </button>
             </Link>
-            <Link to="logowanie">
+            <Link to="Oddaj-rzeczy">
                 <button id="buttons">
                     <p>ZORGANIZUJ</p>
                     <p>ZBIÓRKĘ</p>

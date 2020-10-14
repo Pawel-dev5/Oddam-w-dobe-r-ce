@@ -4,8 +4,7 @@ import Scroll from "react-scroll";
 
 const ScrollLink = Scroll.Link;
 
-// / Navigation function
-function Nav({ user }) {
+function Nav() {
   const menuItems1 = [
     {
       link: "/logowanie",
@@ -47,28 +46,28 @@ function Nav({ user }) {
                 duration={500}
                 to="FourSteps"
               >O co chodzi
-                  </ScrollLink>
+                </ScrollLink>
               <ScrollLink
                 className="navy"
                 smooth={true}
                 duration={500}
                 to="MainAboutUs"
               >O nas
-                  </ScrollLink>
+                </ScrollLink>
               <ScrollLink
                 className="navy"
                 smooth={true}
                 duration={500}
                 to="Fundations"
               >Fundacje i organizacje
-                  </ScrollLink>
+                </ScrollLink>
               <ScrollLink
                 className="navy"
                 smooth={true}
                 duration={500}
                 to="Form"
               >Kontakt
-                  </ScrollLink>
+                </ScrollLink>
             </li>
           </ul>
         </nav>
