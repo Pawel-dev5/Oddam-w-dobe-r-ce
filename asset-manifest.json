@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/oddamwdoberece/static/css/main.5f9e7b60.chunk.css",
-    "main.js": "/oddamwdoberece/static/js/main.31439c58.chunk.js",
-    "main.js.map": "/oddamwdoberece/static/js/main.31439c58.chunk.js.map",
+    "main.css": "/oddamwdoberece/static/css/main.acc6985f.chunk.css",
+    "main.js": "/oddamwdoberece/static/js/main.0e00202c.chunk.js",
+    "main.js.map": "/oddamwdoberece/static/js/main.0e00202c.chunk.js.map",
     "runtime-main.js": "/oddamwdoberece/static/js/runtime-main.e4b1f7ac.js",
     "runtime-main.js.map": "/oddamwdoberece/static/js/runtime-main.e4b1f7ac.js.map",
-    "static/js/2.60e33136.chunk.js": "/oddamwdoberece/static/js/2.60e33136.chunk.js",
-    "static/js/2.60e33136.chunk.js.map": "/oddamwdoberece/static/js/2.60e33136.chunk.js.map",
+    "static/js/2.4a745788.chunk.js": "/oddamwdoberece/static/js/2.4a745788.chunk.js",
+    "static/js/2.4a745788.chunk.js.map": "/oddamwdoberece/static/js/2.4a745788.chunk.js.map",
     "index.html": "/oddamwdoberece/index.html",
-    "precache-manifest.33744067b67485f509c0ef7411bdb0b6.js": "/oddamwdoberece/precache-manifest.33744067b67485f509c0ef7411bdb0b6.js",
+    "precache-manifest.fe88b79ce754b89d11e1dac4a8763e52.js": "/oddamwdoberece/precache-manifest.fe88b79ce754b89d11e1dac4a8763e52.js",
     "service-worker.js": "/oddamwdoberece/service-worker.js",
-    "static/css/main.5f9e7b60.chunk.css.map": "/oddamwdoberece/static/css/main.5f9e7b60.chunk.css.map",
-    "static/js/2.60e33136.chunk.js.LICENSE.txt": "/oddamwdoberece/static/js/2.60e33136.chunk.js.LICENSE.txt",
+    "static/css/main.acc6985f.chunk.css.map": "/oddamwdoberece/static/css/main.acc6985f.chunk.css.map",
+    "static/js/2.4a745788.chunk.js.LICENSE.txt": "/oddamwdoberece/static/js/2.4a745788.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/oddamwdoberece/static/media/Header-Form-Background.87008d4c.png",
     "static/media/Decoration.svg": "/oddamwdoberece/static/media/Decoration.2290784e.svg",
     "static/media/Facebook.svg": "/oddamwdoberece/static/media/Facebook.df65b6c0.svg",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e4b1f7ac.js",
-    "static/js/2.60e33136.chunk.js",
-    "static/css/main.5f9e7b60.chunk.css",
-    "static/js/main.31439c58.chunk.js"
+    "static/js/2.4a745788.chunk.js",
+    "static/css/main.acc6985f.chunk.css",
+    "static/js/main.0e00202c.chunk.js"
   ]
 }

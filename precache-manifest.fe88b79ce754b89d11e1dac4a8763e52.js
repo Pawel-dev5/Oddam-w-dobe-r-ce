@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "81d8cc0dd41ad65b0af635acd616ee45",
+    "revision": "9db8ba2d7eccd3f866a862a25e4f50ec",
     "url": "/oddamwdoberece/index.html"
   },
   {
-    "revision": "56d90272ab9ffffad0cc",
-    "url": "/oddamwdoberece/static/css/main.5f9e7b60.chunk.css"
+    "revision": "f659cbb36ee40ab5be77",
+    "url": "/oddamwdoberece/static/css/main.acc6985f.chunk.css"
   },
   {
-    "revision": "147a9deaa9cf2cac9ea1",
-    "url": "/oddamwdoberece/static/js/2.60e33136.chunk.js"
+    "revision": "abd95303c84b38a8a8eb",
+    "url": "/oddamwdoberece/static/js/2.4a745788.chunk.js"
   },
   {
-    "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/oddamwdoberece/static/js/2.60e33136.chunk.js.LICENSE.txt"
+    "revision": "f9e7e68e90600aabdd7d1f759413461d",
+    "url": "/oddamwdoberece/static/js/2.4a745788.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "56d90272ab9ffffad0cc",
-    "url": "/oddamwdoberece/static/js/main.31439c58.chunk.js"
+    "revision": "f659cbb36ee40ab5be77",
+    "url": "/oddamwdoberece/static/js/main.0e00202c.chunk.js"
   },
   {
     "revision": "60c4b4bccafaf14bb33a",
