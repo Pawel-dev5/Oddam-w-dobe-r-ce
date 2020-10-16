@@ -18,7 +18,7 @@ const LogOut = () => {
       </div>
 
       <div id="LogoutButtons">
-        <Link to="/">
+        <Link to="/oddamwdoberece">
           <button id="LogoutButton">
             Strona główna
           </button>

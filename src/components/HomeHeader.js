@@ -26,13 +26,13 @@ const MainBoxStart = () => (
 const MainBoxStartButtons = () => {
     return (
         <div id="MainBoxStartButtons">
-            <Link to="Oddaj-rzeczy">
+            <Link to="/oddamwdoberece/Oddaj-rzeczy">
                 <button id="buttons">
                     <p>ODDAJ</p>
                     <p>RZECZY</p>
                 </button>
             </Link>
-            <Link to="Oddaj-rzeczy">
+            <Link to="/oddamwdoberece/Oddaj-rzeczy">
                 <button id="buttons">
                     <p>ZORGANIZUJ</p>
                     <p>ZBIÓRKĘ</p>
