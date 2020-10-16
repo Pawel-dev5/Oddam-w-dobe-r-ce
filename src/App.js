@@ -80,7 +80,7 @@ const App = () => {
       setEmailError("")
     }
     if (isErrorPassword) {
-      setPasswordError("Hasło nieprawidłowe");
+      setPasswordError("Hasło za krótkie");
       return;
     } else {
       setPasswordError("")
@@ -138,7 +138,7 @@ const App = () => {
     <>
       <BrowserRouter >
         <Switch>
-          <Route path="/rejestracja" >
+          <Route path="/oddamwdoberece/rejestracja" >
             <>
               {user ? <NavLogin /> : <Nav />}
               <CreateAccount
@@ -155,7 +155,7 @@ const App = () => {
               />
             </>
           </Route>
-          <Route exact path="/" >
+          <Route exact path="/oddamwdoberece" >
             {user ? (
               <>
                 <NavLogin handleLogout={handleLogout} email={email} />
@@ -168,13 +168,13 @@ const App = () => {
                 </>
               )}
           </Route>
-          <Route path="/wylogowano"  >
+          <Route path="/oddamwdoberece/wylogowano"  >
             <LogOut
               handleLogout={handleLogout}
             />
           </Route>
           {user ? (
-            <Route path="/oddaj-rzeczy">
+            <Route path="/oddamwdoberece/oddaj-rzeczy">
               <>
                 <NavLogin handleLogout={handleLogout} email={email} />
                 <OddajRzeczy />
@@ -203,7 +203,7 @@ const App = () => {
             </>
           ) : (
               <>
-                <Route path="/logowanie" >
+                <Route path="/oddamwdoberece/logowanie" >
                   <>
                     {user ? <NavLogin /> : <Nav />}
                     <Login

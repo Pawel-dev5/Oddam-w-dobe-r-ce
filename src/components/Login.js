@@ -46,7 +46,7 @@ const Login = (props) => {
               {passwordError && <h1>{passwordError}</h1>}
             </div>
             <div id="LoginButtons">
-              <Link to="rejestracja">
+              <Link to="/oddamwdoberece/rejestracja">
                 <button id="LoginButtons1">
                   Załóż konto
                   </button>

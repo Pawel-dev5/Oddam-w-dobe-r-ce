@@ -57,7 +57,7 @@ const CreateAccount = (props) => {
             </label>
           </div>
           <div id="CreateAccountButtons">
-            <Link to="/logowanie">
+            <Link to="/oddamwdoberece/logowanie">
             <button id="CreateAccountButtons2">Zaloguj się</button>
             </Link>
             <button id="CreateAccountButtons1" onClick={handleSignup}>
