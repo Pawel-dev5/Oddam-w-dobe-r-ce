@@ -4,18 +4,25 @@ import Scroll from "react-scroll";
 
 const ScrollLink = Scroll.Link;
 
-function NavLogin({ handleLogout }) {
+function NavLogin(props) {
+    const {
+        handleLogout,
+        email,
+    } = props
     return (
         <>
             <header>
                 <nav id="Nav2">
                     <ul>
                         <li>
-                            <NavLink exact to="/oddaj-rzeczy" className="menu-link"
+                           <h1>Witaj! <span>{email}</span></h1>
+                        </li>
+                        <li>
+                            <NavLink exact to="/oddamwdoberece/oddaj-rzeczy" className="menu-link"
                                 activeClassName="menu-link-active" >Oddaj Rzeczy</NavLink>
                         </li>
                         <li>
-                            <NavLink exact to="/wylogowano" className="menu-link"
+                            <NavLink exact to="/oddamwdoberece/wylogowano" className="menu-link"
                                 activeClassName="menu-link-active" >
                                 <button onClick={handleLogout} className="LogOutButton">Wyloguj</button></NavLink>
                         </li>
@@ -24,9 +31,9 @@ function NavLogin({ handleLogout }) {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink exact to="/" className="menu-link"
+                            <NavLink exact to="/oddamwdoberece" className="menu-link"
                                 activeClassName="menu-link-active">Start</NavLink>
-                            <ScrollLink path="/"
+                            <ScrollLink
                                 className="navy"
                                 smooth={true}
                                 duration={500}

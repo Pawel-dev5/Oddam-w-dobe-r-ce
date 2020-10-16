@@ -47,7 +47,7 @@ const FourSteps = () => {
                 </div>
             </div>
             <div>
-                <Link to="Oddaj-rzeczy">
+                <Link to="/oddamwdoberece/Oddaj-rzeczy">
                     <button id="buttons">
                         <p>ODDAJ</p>
                         <p>RZECZY</p>

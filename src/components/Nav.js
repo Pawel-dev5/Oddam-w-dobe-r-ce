@@ -7,11 +7,11 @@ const ScrollLink = Scroll.Link;
 function Nav() {
   const menuItems1 = [
     {
-      link: "/logowanie",
+      link: "/oddamwdoberece/logowanie",
       name: "Zaloguj"
     },
     {
-      link: "/rejestracja",
+      link: "/oddamwdoberece/rejestracja",
       name: "Załóż konto"
     }
   ]
@@ -24,7 +24,7 @@ function Nav() {
             {menuItems1.map(item => (
               <li key={item.link}>
                 <NavLink
-                  exact={item.link === "/"}
+                  exact={item.link === "/oddamwdoberece"}
                   to={item.link}
                   className="menu-link"
                   activeClassName="menu-link-active"
@@ -38,9 +38,9 @@ function Nav() {
         <nav>
           <ul>
             <li>
-              <NavLink exact to="/" className="menu-link"
+              <NavLink exact to="/oddamwdoberece" className="menu-link"
                 activeClassName="menu-link-active">Start</NavLink>
-              <ScrollLink path="/"
+              <ScrollLink
                 className="navy"
                 smooth={true}
                 duration={500}
