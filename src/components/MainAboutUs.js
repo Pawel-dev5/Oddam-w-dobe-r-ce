@@ -1,6 +1,5 @@
 import React from "react";
 import Decoration from "../assets/assets/Decoration.svg";
-import People from "../assets/assets/People.jpg"
 import Signature from "../assets/assets/Signature.svg"
 
 const MainAboutUs = () => {
@@ -18,8 +17,8 @@ const MainAboutUs = () => {
 
                 </div>
             </div>
-            <div>
-                <img id="MainAboutUsFoto" src={People} alt="people"></img>
+            <div className="img-box">
+                {/* <img id="MainAboutUsFoto" src={People} alt="people"></img> */}
             </div>
         </section>
     )
